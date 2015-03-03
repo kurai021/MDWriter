@@ -1,0 +1,21 @@
+{
+  "name": "MDWriter",
+  "main": "app/index.html",
+  "window": {
+    "title": "MDWriter",
+    "icon": "app/assets/icon.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 800,
+    "height": 500,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-open": "^0.3.2",
+    "gulp-shell": "^0.2.11",
+    "nw": "^0.12.0-alpha2"
+  }
+}

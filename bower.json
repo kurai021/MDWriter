@@ -1,0 +1,25 @@
+{
+  "name": "MDWriter",
+  "version": "0.0.1",
+  "authors": [
+    "Richard Armuelles <alexanderarmuelles@hotmail.com>"
+  ],
+  "description": "A Markdown editor for desktop based in HTML5",
+  "main": "app/index.html",
+  "license": "Apache",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1",
+    "highlight.js": "~7.3.0",
+    "marked": "~0.3.3",
+    "fontawesome": "~4.3.0"
+  }
+}
