@@ -13,7 +13,7 @@
     "min_height": 200
   },
   "devDependencies": {
-    "gulp": "^3.8.10",
+    "gulp": "^3.8.11",
     "gulp-open": "^0.3.2",
     "gulp-shell": "^0.2.11",
     "nw": "^0.12.0-alpha2"
