@@ -1,144 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="MdWApp">
 <head>
   <meta charset="UTF-8">
   <title>MDWriter</title>
-  <link rel="stylesheet" href="components/foundation/css/foundation.css">
-  <link rel="stylesheet" href="components/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="components/highlight.js/src/styles/monokai.css">
+  <link rel="stylesheet" href="assets/components/foundation/css/foundation.css">
+  <link rel="stylesheet" href="assets/components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/components/highlight.js/src/styles/monokai.css">
+  <link rel="stylesheet" href="assets/components/CodeMirror/lib/codemirror.css">
+  <link rel="stylesheet" href="assets/components/CodeMirror/theme/mdn-like.css">
+  <link rel="stylesheet" href="assets/components/CodeMirror/addon/scroll/simplescrollbars.css">
   <!-- custom style -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body ng-app="MdWController">
 
-  <div id="alert-markdown-help" data-alert class="alert-box secondary" tabindex="0" aria-live="assertive" role="dialogalert">
-    <h4>Markdown Syntax</h4>
-    <div class="syntax">
+  <div class="off-canvas-wrap fixed" data-offcanvas>
+    <div class="inner-wrap">
 
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><b>Result</b></div>
-        <div class="small-4 medium-4 large-4 columns"><b>Syntax</b></div>
-        <div class="small-4 medium-4 large-4 columns"><b>Shortcut</b></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><b>Bold</b></div>
-        <div class="small-4 medium-4 large-4 columns"><span>**text**</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl/⌘ + B</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><i>Emphasize</i></div>
-        <div class="small-4 medium-4 large-4 columns"><span>*text*</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl/⌘ + I</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><del>Strike-through</del></div>
-        <div class="small-4 medium-4 large-4 columns"><span>~~text~~</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl + Alt + U</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><a>Link</a></div>
-        <div class="small-4 medium-4 large-4 columns"><span>[title](http://)</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl/⌘ + K</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><pre>Inline Code</pre></div>
-        <div class="small-4 medium-4 large-4 columns"><span>`code`</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Alt + K</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><span>Image</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>![alt](http://)</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Alt + I</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><li>List</li></div>
-        <div class="small-4 medium-4 large-4 columns"><span>* item</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl + L</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><blockquote>Blockquote</blockquote></div>
-        <div class="small-4 medium-4 large-4 columns"><span>> quote</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl + Q</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><span>H1</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span># Heading</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl + Alt + 1</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><span>H2</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>## Heading</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl + Alt + 2</span></div>
-      </div>
-      <div class="column">
-        <div class="small-4 medium-4 large-4 columns"><span>H3</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>### Heading</span></div>
-        <div class="small-4 medium-4 large-4 columns"><span>Ctrl + Alt + 3</span></div>
-      </div>
 
-    </div>
-    <button id="close-help" tabindex="0" class="close" aria-label="Close Alert"><i class="fa fa-times"></i></button>
-  </div>
+        <div id="toLoad-alert" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <input class="button secondary" id="filetoload" type="file">
+          <button class="small radius" onclick="loadFileAsText()" id="loadFile">Load File</button>
+        </div>
 
-  <div id="toLoad-alert" data-alert class="alert-box secondary" tabindex="0" aria-live="assertive" role="dialogalert">
-    <input id="filetoload" type="file">
-    <button onclick="loadFileAsText()" id="loadFile">Load File</button>
-    <button id="close-toLoad" tabindex="0" class="close" aria-label="Close Alert"><i class="fa fa-times"></i></button>
-  </div>
+        <div id="tumblr-alert" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <h3>Publish in Tumblr</h3>
+          <a class="button" id="tumblr-embed" href="" target="_blank">Enter here!</a>
+        </div>
 
-  <div class="fixed">
+        <div id="blogger-alert" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <h3>Publish in Blogger</h3>
+          <a class="button" id="blogger-embed" href="" target="_blank">Enter here!</a>
+        </div>
 
-    <div class="top-bar" data-topbar role="navigation" data-options="is_hover: false">
+          <nav class="tab-bar">
 
-      <section class="top-bar-section">
-        <ul class="left">
-          <li><a href="#" id="toLoad">Load File</a></li>
-          <li><a href="#" id="saveFile">Save File</a></li>
-          <li><a href="#" id="saveHTML">Save as HTML</a></li>
-          <li><a href="#" id="savePDF">Save as PDF</a></li>
-        </ul>
-      </section>
+            <section class="left-small">
+              <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+            </section>
 
-    </div>
+            <section class="middle tab-bar-section">
+              <h1 class="title">MDWriter</h1>
+            </section>
 
-  </div>
+            <section class="right tab-bar-section">
+              <a href="" id="btn-min"><span><i class="fa fa-minus-circle"></i></span></a>
+              <a href="" id="btn-max"><span><i class="fa fa-plus-circle"></i></span></a>
+              <a href="" id="btn-close"><span><i class="fa fa-times-circle"></i></span></a>
+            </section>
 
-  <div class="row">
-    <div id="div-name-file" class="small-6 medium-6 large-6 columns">
-      <label>File Name:
-        <input id="filename" type="text" />
-      </label>
-    </div>
-    <div id="div-help-markdown" class="small-6 medium-6 large-6 columns">
-      <a id="help-markdown" href="#"><i class="fa fa-question-circle"></i></a>
+          </nav>
+
+          <aside class="left-off-canvas-menu">
+            <ul class="off-canvas-list">
+              <li><label>File</label></li>
+              <li><a href="#" data-reveal-id="toLoad-alert">Load File</a></li>
+              <li><a href="" id="saveMd">Save File</a></li>
+              <li><a href="" id="saveHTML">Save as HTML</a></li>
+              <li><a href="" id="savePDF">Save as PDF</a></li>
+
+              <li><label for="">Publish</label></li>
+              <!--<li><a href="#"id="wordpress">Wordpress</a></li>-->
+              <li><a href="#" data-reveal-id="tumblr-alert" id="tumblr">Tumblr</a></li>
+              <li><a href="#" data-reveal-id="blogger-alert" id="blogger">Blogger</a></li>
+
+
+            </ul>
+          </aside>
+
+        <section class="main-section">
+
+          <div class="row">
+            <div id="div-name-file" class="small-6 medium-6 large-6 columns">
+              <label>File Name:
+                <input id="filename" type="text" />
+              </label>
+            </div>
+            <div id="div-help-markdown" class="small-6 medium-6 large-6 columns">
+              <a id="help-markdown" href="" ng-click="show = !show"><i class="fa fa-question-circle"></i></a>
+            </div>
+
+            <div id="view-help" ng-include="'assets/views/help.html'" ng-show="show"></div>
+
+          </div>
+
+          <div class="row">
+            <div class="small-12 medium-6 large-6 columns">
+              <label>Markdown:
+                <textarea id="editor" placeholder="Empieza una nueva historia..." name="editor"></textarea>
+              </label>
+            </div>
+            <div class="small-12 medium-6 large-6 columns">
+              <label>Preview:
+                <div id="output"></div>
+              </label>
+            </div>
+            <div class="small-12 medium-12 large-12 columns">
+              <span id="word-counter"></span> Words
+            </div>
+          </div>
+
+        </section>
+
+        <a class="exit-off-canvas"></a>
+
     </div>
   </div>
 
-  <div class="row">
-    <div class="small-12 medium-6 large-6 columns">
-      <label>Markdown:
-        <textarea id="editor" placeholder="Escribe aquí..."></textarea>
-      </label>
-    </div>
-    <div class="small-12 medium-6 large-6 columns">
-      <span id="word-counter"></span> Words
-      <label>Preview:
-        <div id="output"></div>
-      </label>
-    </div>
-  </div>
+  <script src="assets/components/foundation/js/vendor/modernizr.js"></script>
+  <script src="assets/components/foundation/js/vendor/jquery.js"></script>
+  <script src="assets/components/foundation/js/foundation.min.js"></script>
+  <script>
+  $(document).foundation();
+  </script>
+  <script src="assets/components/angular/angular.min.js"></script>
+  <script src="assets/components/angular-route/angular-route.min.js"></script>
+  <script src="assets/components/marked/lib/marked.js"></script>
+  <script src="assets/components/jsPDF/dist/jspdf.min.js"></script>
+  <script src="assets/components/highlight.js/build/highlight.pack.js"></script>
+  <script src="assets/components/CodeMirror/lib/codemirror.js"></script>
+  <script src="assets/components/CodeMirror/addon/display/placeholder.js"></script>
+  <script src="assets/components/CodeMirror/addon/scroll/annotatescrollbar.js"></script>
+  <script src="assets/components/CodeMirror/addon/edit/continuelist.js"></script>
+  <script src="assets/components/CodeMirror/addon/edit/closebrackets.js"></script>
+  <script src="assets/components/CodeMirror/addon/scroll/simplescrollbars.js"></script>
+  <script src="assets/components/CodeMirror/mode/markdown/markdown.js"></script>
 
-  <script src="components/foundation/js/vendor/modernizr.js"></script>
-  <script src="components/foundation/js/vendor/jquery.js"></script>
-  <script src="components/foundation/js/foundation.min.js"></script>
-  <script src="components/marked/lib/marked.js"></script>
-  <script src="components/jsPDF/dist/jspdf.min.js"></script>
-  <script src="js/markdown-help.js"></script>
-  <script src="js/file.js"></script>
-  <script src="components/highlight.js/build/highlight.pack.js"></script>
+  <script src="assets/js/MdWController.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script src="js/markdown.js"></script>
-  <script src="js/toPDF.js"></script>
-  <script src="js/word-counter.js"></script>
+  <script src="assets/js/window.js"></script>
+  <script src="assets/js/markdown-help.js"></script>
+  <script src="assets/js/file.js"></script>
+  <script src="assets/js/markdown.js"></script>
+  <script src="assets/js/toPDF.js"></script>
+  <script src="assets/js/word-counter.js"></script>
+  <script src="assets/js/publish.js"></script>
 </body>
 </html>

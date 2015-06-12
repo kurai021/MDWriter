@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding-top: 50px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  overflow-y: hidden;
+}
+
+blockquote {
+  padding: 0;
+}
+
+.tab-bar, .left-off-canvas-menu {
+  background-color: #16171A;
+}
+
+ul.off-canvas-list li label {
+  background-image: linear-gradient(to bottom, #282828 0%, #1e1e1e 100%);
+  border-bottom: 1px solid #000000;
+  text-transform: none;
+}
+
+@keyframes aniborder {
+  0% {border-bottom: none;}
+  100% {border-bottom: 5px solid #2B6ED2;}
+}
+
+ul.off-canvas-list li a:hover {
+  background: #16171A;
+  animation: aniborder 0.2s forwards;
+
+}
+
+.row {
+  margin: 0;
+  max-width: 100%;
+}
+
+.white {
+  color: white;
+}
+
+.fixed {
+  top: -50px;
+}
+
+#alert-markdown-help{
+  top:90px;
+  left:30%;
+  width: 45%;
+  text-align: center;
+  z-index: 9999;
+  position: fixed;
+  padding: 0;
+}
+
+#toLoad-alert{
+  top:50px;
+  left:30%;
+  width: 45%;
+  visibility: hidden;
+  text-align: center;
+  z-index: 9999;
+  position: fixed;
+  padding: 0;
+}
+
+#tumblr-alert, #blogger-alert {
+  top:50px;
+  left:30%;
+  width: 30%;
+  visibility: hidden;
+  text-align: center;
+  z-index: 9999;
+  position: fixed;
+  padding: 15px;
+}
+
+#tumblr-alert .button, #blogger-alert .button {
+  color: white;
+}
+
+.column{
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.alert-box .close {
+  top: 10px;
+  opacity:1;
+}
+
+#div-help-markdown {
+  text-align: right;
+}
+
+#editor {
+  height: 75vh;
+}
+
+.CodeMirror {
+  height: 75vh;
+}
+
+#output {
+  overflow-y: scroll;
+  height: 75vh;
+}
+
+a {
+  color: #3D3D3D;
+}
+
+a:link {
+  color: #3D3D3D;
+}
+
+a:hover {
+  color: #1D1F21;
+}
+
+a:active {
+  color: #1D1F21;
+}
+
+a:visited {
+  color: #3D3D3D;
+}
+
+#btn-min, #btn-max, #btn-close {
+  color: white;
+}
+
+#btn-min:hover {
+  color: #f1c40f;
+}
+
+#btn-max:hover {
+  color: #27ae60;
+}
+
+#btn-close:hover {
+  color: #E74C3C;
+}
