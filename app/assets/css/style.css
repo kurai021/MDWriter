@@ -11,18 +11,34 @@ blockquote {
   padding: 0;
 }
 
+select {
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.tab-bar .left-small .menu-icon {
+  -webkit-app-region: no-drag;
+}
+
+.tab-bar .middle .title {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
+
 .tab-bar, .left-off-canvas-menu {
   background-color: #16171A;
 }
 
 ul.off-canvas-list li label {
   background-image: linear-gradient(to bottom, #282828 0%, #1e1e1e 100%);
-  border-bottom: 1px solid #000000;
+  border-bottom: 2px solid #000000;
   text-transform: none;
 }
 
 @keyframes aniborder {
   0% {border-bottom: none;}
+  50% {border-bottom: 2px solid #7098D4;}
   100% {border-bottom: 5px solid #2B6ED2;}
 }
 
@@ -30,6 +46,10 @@ ul.off-canvas-list li a:hover {
   background: #16171A;
   animation: aniborder 0.2s forwards;
 
+}
+
+.text-collapse {
+  margin-left: 15px;
 }
 
 .row {
@@ -45,17 +65,24 @@ ul.off-canvas-list li a:hover {
   top: -50px;
 }
 
+#div-name-file {
+  margin-right: -15px;
+}
+
+#type-md {
+  margin-left: -15px;
+}
+
 #alert-markdown-help{
-  top:90px;
-  left:30%;
+  top:50px;
   width: 45%;
   text-align: center;
   z-index: 9999;
   position: fixed;
-  padding: 0;
+  padding: 15px;
 }
 
-#toLoad-alert{
+#toLoad-alert {
   top:50px;
   left:30%;
   width: 45%;
@@ -66,7 +93,21 @@ ul.off-canvas-list li a:hover {
   padding: 0;
 }
 
-#tumblr-alert, #blogger-alert {
+#packages-alert {
+  top:50px;
+  left:30%;
+  width: 45%;
+  visibility: hidden;
+  z-index: 9999;
+  position: fixed;
+}
+
+#ListPkg {
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
+#tumblr-alert, #blogger-alert, #email-alert, #chEditor-alert {
   top:50px;
   left:30%;
   width: 30%;
@@ -75,6 +116,10 @@ ul.off-canvas-list li a:hover {
   z-index: 9999;
   position: fixed;
   padding: 15px;
+}
+
+#email-alert label, #chEditor-alert label {
+  text-align: left;
 }
 
 #tumblr-alert .button, #blogger-alert .button {
@@ -106,6 +151,8 @@ ul.off-canvas-list li a:hover {
 #output {
   overflow-y: scroll;
   height: 75vh;
+  border-left: 3px solid #efefef;
+  padding-left: 7px;
 }
 
 a {
@@ -128,8 +175,13 @@ a:visited {
   color: #3D3D3D;
 }
 
+#loadFile {
+  margin-bottom: 15px;
+}
+
 #btn-min, #btn-max, #btn-close {
   color: white;
+  -webkit-app-region: no-drag;
 }
 
 #btn-min:hover {

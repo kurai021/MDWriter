@@ -6,16 +6,18 @@
     "icon": "app/assets/icon.png",
     "toolbar": false,
     "frame": false,
-    "width": 800,
-    "height": 600,
-    "position": "mouse",
+    "position": "center",
     "min_width": 800,
-    "min_height": 600
+    "min_height": 600,
+    "resizable": true
   },
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-open": "^0.3.2",
     "gulp-shell": "^0.2.11",
     "nw": "^0.12.0-alpha2"
+  },
+  "dependencies": {
+    "nodemailer": "^2.0.0"
   }
 }

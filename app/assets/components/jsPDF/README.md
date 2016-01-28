@@ -2,7 +2,7 @@
 
 **Generate PDF files in client-side JavaScript.**
 
-You can [catch me on twitter](http://twitter.com/MrRio): [@MrRio](http://twitter.com/MrRio) or head over to [my company's website](http://snapshotmedia.co.uk) for consultancy. 
+You can [catch me on twitter](http://twitter.com/MrRio): [@MrRio](http://twitter.com/MrRio) or head over to [my company's website](http://snapshotmedia.co.uk) for consultancy.
 
 ## Creating your first document
 
@@ -25,7 +25,7 @@ git clone --recursive git://github.com/MrRio/jsPDF.git
 
 ## Credits
 
-Big thanks to Daniel Dotsenko from [Willow Systems Corporation](http://willow-systems.com) for making huge contributions to the codebase. 
+Big thanks to Daniel Dotsenko from [Willow Systems Corporation](http://willow-systems.com) for making huge contributions to the codebase.
 
 Thanks to Ajaxian.com for [featuring us back in 2009](http://ajaxian.com/archives/dynamically-generic-pdfs-with-javascript).
 

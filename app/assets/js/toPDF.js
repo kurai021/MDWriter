@@ -5,7 +5,7 @@ document.getElementById('savePDF').onclick = function(){
 
 	var doc = new jsPDF();
 
-	doc.fromHTML($('#output').html(), 15, 15, {
+	doc.fromHTML($('#output').get(0), 15, 15, {
 		'width': 170,
 		'elementHandlers': specialElementHandlers
 	});
