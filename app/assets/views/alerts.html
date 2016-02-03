@@ -65,23 +65,23 @@
 <div id="email-alert" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
   <h3>Send Email</h3>
 
-  <label for="">TO:</label>
   <div class="row collapse">
+    <label for="">To:</label>
     <div class="small-3 large-2 columns">
       <span class="prefix"><i class="fa fa-envelope"></i></span>
     </div>
     <div class="small-9 large-10 columns">
-      <input id="to" type="text" placeholder="Reciver's email address">
+      <input id="to" type="text" required pattern="email" placeholder="Reciver's email address">
     </div>
   </div>
 
-  <label for="">FROM:</label>
+  <label for="">From:</label>
   <div class="row collapse">
     <div class="small-3 large-2 columns">
       <span class="prefix"><i class="fa fa-envelope"></i></span>
     </div>
     <div class="small-9 large-10 columns">
-      <input id="from" type="text" placeholder="Your email address">
+      <input id="from" type="text" required placeholder="Email address (only Gmail/Outlook)">
     </div>
   </div>
 
@@ -91,7 +91,7 @@
       <span class="prefix"><i class="fa fa-lock"></i></span>
     </div>
     <div class="small-9 large-10 columns">
-      <input id="password" type="password" placeholder="Your password">
+      <input id="password" type="password" required placeholder="Your password">
     </div>
   </div>
 
