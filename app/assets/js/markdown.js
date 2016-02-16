@@ -126,6 +126,278 @@ document.getElementById('accept-change-theme').onclick = function(){
 
 }
 
+//highlight theme changer
+document.getElementById("accept-change-highlight-theme").onclick = function(){
+  var highlight_theme = document.getElementById('chhighlightthemes').selectedOptions[0].text;
+
+  function swapStyleSheet(sheet) {
+    document.getElementById("highlight_theme").setAttribute("href", sheet);
+  }
+
+  if(highlight_theme == 'agate'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/agate.css");
+  }
+
+  else if(highlight_theme == 'androidstudio'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/androidstudio.css");
+  }
+
+  else if(highlight_theme == 'arduino-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/arduino-light.css");
+  }
+
+  else if(highlight_theme == 'arta'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/arta.css");
+  }
+
+  else if(highlight_theme == 'ascetic'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/ascetic.css");
+  }
+
+  else if(highlight_theme == 'atelier-cave-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-cave-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-cave-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-cave-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-dune-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-dune-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-dune-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-dune-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-estuary-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-estuary-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-estuary-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-estuary-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-forest-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-forest-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-forest-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-forest-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-heath-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-heath-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-heath-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-heath-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-lakeside-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-lakeside-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-lakeside-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-lakeside-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-plateau-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-plateau-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-plateau-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-plateau-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-savanna-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-savanna-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-savanna-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-savanna-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-seaside-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-seaside-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-seaside-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-seaside-light.css");
+  }
+
+  else if(highlight_theme == 'atelier-sulphurpool-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-sulphurpool-dark.css");
+  }
+
+  else if(highlight_theme == 'atelier-sulphurpool-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/atelier-sulphurpool-light.css");
+  }
+
+  else if(highlight_theme == 'brown-paper'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/brown-paper.css");
+  }
+
+  else if(highlight_theme == 'codepen-embed'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/codepen-embed.css");
+  }
+
+  else if(highlight_theme == 'color-brewer'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/color-brewer.css");
+  }
+
+  else if(highlight_theme == 'dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/dark.css");
+  }
+
+  else if(highlight_theme == 'darkula'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/darkula.css");
+  }
+
+  else if(highlight_theme == 'default'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/default.css");
+  }
+
+  else if(highlight_theme == 'docco'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/docco.css");
+  }
+
+  else if(highlight_theme == 'far'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/far.css");
+  }
+
+  else if(highlight_theme == 'foundation'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/foundation.css");
+  }
+
+  else if(highlight_theme == 'github'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/github.css");
+  }
+
+  else if(highlight_theme == 'github-gist'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/github-gist.css");
+  }
+
+  else if(highlight_theme == 'googlecode'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/googlecode.css");
+  }
+
+  else if(highlight_theme == 'grayscale'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/grayscale.css");
+  }
+
+  else if(highlight_theme == 'hopscotch'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/hopscotch.css");
+  }
+
+  else if(highlight_theme == 'hybrid'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/hybrid.css");
+  }
+
+  else if(highlight_theme == 'idea'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/idea.css");
+  }
+
+  else if(highlight_theme == 'ir-black'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/ir-black.css");
+  }
+
+  else if(highlight_theme == 'kimbie.dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/kimbie.dark.css");
+  }
+
+  else if(highlight_theme == 'kimbie.light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/kimbie.light.css");
+  }
+
+  else if(highlight_theme == 'magula'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/magula.css");
+  }
+
+  else if(highlight_theme == 'mono-blue'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/mono-blue.css");
+  }
+
+  else if(highlight_theme == 'monokai'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/monokai.css");
+  }
+
+  else if(highlight_theme == 'monokai-sublime'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/monokai-sublime.css");
+  }
+
+  else if(highlight_theme == 'obsidian'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/obsidian.css");
+  }
+
+  else if(highlight_theme == 'paraiso-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/paraiso-dark.css");
+  }
+
+  else if(highlight_theme == 'pojoaque'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/pojoaque.css");
+  }
+
+  else if(highlight_theme == 'railscasts'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/railscasts.css");
+  }
+
+  else if(highlight_theme == 'rainbow'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/rainbow.css");
+  }
+
+  else if(highlight_theme == 'school-book'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/school-book.css");
+  }
+
+  else if(highlight_theme == 'solarized-dark'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/solarized-dark.css");
+  }
+
+  else if(highlight_theme == 'solarized-light'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/solarized-light.css");
+  }
+
+  else if(highlight_theme == 'sunburst'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/sunburst.css");
+  }
+
+  else if(highlight_theme == 'tomorrow'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/tomorrow.css");
+  }
+
+  else if(highlight_theme == 'tomorrow-night'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/tomorrow-night.css");
+  }
+
+  else if(highlight_theme == 'tomorrow-night-blue'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/tomorrow-night-blue.css");
+  }
+
+  else if(highlight_theme == 'tomorrow-night-bright'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/tomorrow-night-bright.css");
+  }
+
+  else if(highlight_theme == 'tomorrow-night-eighties'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/tomorrow-night-eighties.css");
+  }
+
+  else if(highlight_theme == 'vs'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/vs.css");
+  }
+
+  else if(highlight_theme == 'xcode'){
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/xcode.css");
+  }
+
+  else{
+    swapStyleSheet("assets/components/highlight.js/build/demo/styles/zenburn.css");
+  }
+
+}
+
+
+
 document.body.onkeyup = function(e) {
   document.getElementById('editor').value = codemirror.getValue();
 
