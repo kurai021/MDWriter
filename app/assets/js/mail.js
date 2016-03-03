@@ -16,12 +16,15 @@ document.getElementById("send-email").onclick = function(){
   }
 
 
-  var patt = new RegExp("@gmail.com");
+  var gmail_patt = /@gmail.com/g;
+  var outlook_patt = /@outlook.com|@hotmail.com/g;
+  var yahoo_patt = /@yahoo.com|@yahoo.es/g;
 
-  if(patt.test(from) == true){
+  if(gmail_patt.test(from) == true){
     var transporter = nodemailer.createTransport("smtps://" + from + ":" + pass + "@smtp.gmail.com");
   }
-  else {
+
+  else if (outlook_patt.test(from) == true) {
     var transporter = nodemailer.createTransport({
         host: "smtp-mail.outlook.com", // hostname
         port: 587, // port for secure SMTP
@@ -30,6 +33,26 @@ document.getElementById("send-email").onclick = function(){
             pass: pass
         }
     });
+  }
+
+  else if (yahoo_patt.test(from) == true) {
+    var transporter = nodemailer.createTransport({
+      host:"smtp.mail.yahoo.com",
+      port: 587,
+      auth: {
+        user: from,
+        pass: pass
+      }
+    })
+  }
+
+  else {
+    var errormsg = '<small class="error">Email not supported<small>';
+
+    $('#from').addClass("error");
+    $(errormsg).insertAfter('#from');
+
+    return console.log(error);
   }
 
   // send mail with defined transport object
@@ -52,10 +75,23 @@ document.getElementById("send-email").onclick = function(){
     }
 
     else {
-      console.log('Message sent: ' + info.response);
 
-      var modal = document.getElementById("email-alert");
-      modal.foundation('reveal','close');
+      $("#email-alert").foundation('reveal','close');
+
+      $(document).on('closed.fndtn.reveal', '#email-alert', function () {
+
+        var options = {
+          body: "Email sent!"
+        };
+
+        var sentN = new Notification('MDWriter',options);
+        setTimeout(function() {sentN.close();}, 5000);
+
+        // your code goes here...
+        console.log('Message sent: ' + info.response);
+
+      });
+
     }
 
   });

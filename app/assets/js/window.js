@@ -1,6 +1,8 @@
 var win = require('nw.gui').Window.get();
 
-var maximized = false;
+var maximized = true;
+
+win.maximize();
 
 document.getElementById("btn-max").onclick = function(){
 

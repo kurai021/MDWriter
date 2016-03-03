@@ -107,7 +107,7 @@ ul.off-canvas-list li a:hover {
   overflow-y: scroll;
 }
 
-#tumblr-alert, #blogger-alert, #email-alert, #chEditor-alert {
+#tumblr-alert, #blogger-alert, #email-alert, #chEditor-alert{
   top:50px;
   left:30%;
   width: 30%;
@@ -116,6 +116,32 @@ ul.off-canvas-list li a:hover {
   z-index: 9999;
   position: fixed;
   padding: 15px;
+}
+
+#reveal-about {
+  width: 40%;
+  position: fixed;
+  z-index: 9999;
+  top: 200px;
+}
+
+#reveal-about h2{
+  text-align: center;
+  font-size: 40px;
+}
+
+#reveal-about p {
+  color: gray;
+  font-size: 16px;
+  text-align: center;
+}
+
+#reveal-about span {
+  font-size: 18px;
+}
+
+#reveal-about span p {
+  text-align: center;
 }
 
 #email-alert label, #chEditor-alert label {
