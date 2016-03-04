@@ -49,6 +49,6 @@ Check LICENSE for information.
 
 ## Donations
 
-If this project was useful for you, you can donate some BTC
+If this project was useful for you, you can donate some BTC :D
 
-<a href="bitcoin:19bAJaFzHRTYPW5SrbzzfPbZ5jLAEotCVa?amount=0.024&label=support MDWriter&message=Hi, thanks for create MDWriter!"><img src="./assets/bitcoin.svg" alt="bitcoin-btn"></a>
+[![Build Status](./assets/bitcoin.svg)](bitcoin:19bAJaFzHRTYPW5SrbzzfPbZ5jLAEotCVa?amount=0.024&label=support MDWriter&message=Hi, thanks for create MDWriter!)
