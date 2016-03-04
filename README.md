@@ -49,6 +49,4 @@ Check LICENSE for information.
 
 ## Donations
 
-If this project was useful for you, you can donate some BTC :D
-
-[![Dondate Button](https://github.com/kurai021/MDWriter/blob/master/app/assets/bitcoin.svg)](bitcoin:19bAJaFzHRTYPW5SrbzzfPbZ5jLAEotCVa?amount=0.024&label=support MDWriter&message=Hi, thanks for create MDWriter!)
+If this project was useful for you, you can [donate some BTC](bitcoin:19bAJaFzHRTYPW5SrbzzfPbZ5jLAEotCVa?amount=0.024&label=support MDWriter&message=Hi, thanks for create MDWriter!)
