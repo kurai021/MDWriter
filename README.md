@@ -34,11 +34,15 @@ $ bower install
 ## ToDo
 
 * Actually jsPDF is unstable, is necessary to find a module that does the same function or create a module from scratch for HTML5 to PDF.
-* Some bugs in the word counter must be solved.
-* In file name is necessary to clean the name -> /foo/bar.md to bar.md.
+* ~~Some bugs in the word counter must be solved.~~
+* ~~In file name is necessary to clean the name -> /foo/bar.md to bar.~~
+* ~~Change font size in live.~~
 * Support for Blogger, Tumblr and Wordpress (maybe Ghost).
 * Font size change support.
 * Print support?.
+* Optimize the code
+* Create a task for minification.
+* Delete all bower dependencies and use only node package?
 
 ## License
 

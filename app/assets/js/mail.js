@@ -78,19 +78,15 @@ document.getElementById("send-email").onclick = function(){
 
       $("#email-alert").foundation('reveal','close');
 
-      $(document).on('closed.fndtn.reveal', '#email-alert', function () {
+      var options = {
+        body: "Email sent!"
+      };
 
-        var options = {
-          body: "Email sent!"
-        };
+      var sentN = new Notification('MDWriter',options);
+      setTimeout(function() {sentN.close();}, 5000);
 
-        var sentN = new Notification('MDWriter',options);
-        setTimeout(function() {sentN.close();}, 5000);
-
-        // your code goes here...
-        console.log('Message sent: ' + info.response);
-
-      });
+      // your code goes here...
+      console.log('Message sent: ' + info.response);
 
     }
 

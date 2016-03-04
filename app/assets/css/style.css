@@ -119,7 +119,7 @@ ul.off-canvas-list li a:hover {
 }
 
 #reveal-about {
-  width: 40%;
+  width: 55%;
   position: fixed;
   z-index: 9999;
   top: 200px;
@@ -141,6 +141,15 @@ ul.off-canvas-list li a:hover {
 }
 
 #reveal-about span p {
+  text-align: center;
+}
+
+#reveal-about .small-12 {
+  text-align: center;
+}
+
+#reveal-about small {
+  font-size: 70%;
   text-align: center;
 }
 

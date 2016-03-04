@@ -20,6 +20,7 @@ document.getElementById('filename').value = 'new-document-' + mm + '-' + dd + '-
 //editor theme changer
 document.getElementById('accept-change-theme').onclick = function(){
   var theme = document.getElementById('chthemes').selectedOptions[0].text;
+  var size = document.getElementById('chsize').selectedOptions[0].text;
 
   if(theme == '3024-day'){
     codemirror.setOption("theme", "3024-day");
@@ -122,6 +123,110 @@ document.getElementById('accept-change-theme').onclick = function(){
   }
   else{
     codemirror.setOption("theme", "mdn-like");
+  }
+
+  if (size == '9'){
+    $(".CodeMirror pre").css('font-size',"9pt");
+  }
+
+  else if (size == '10'){
+    $(".CodeMirror pre").css('font-size',"10pt");
+  }
+
+  else if (size == '11'){
+    $(".CodeMirror pre").css('font-size',"11pt");
+  }
+
+  else if (size == '12'){
+    $(".CodeMirror pre").css('font-size',"12pt");
+  }
+
+  else if (size == '13'){
+    $(".CodeMirror pre").css('font-size',"13pt");
+  }
+
+  else if (size == '14'){
+    $(".CodeMirror pre").css('font-size',"14pt");
+  }
+
+  else if (size == '15'){
+    $(".CodeMirror pre").css('font-size',"15pt");
+  }
+
+  else if (size == '16'){
+    $(".CodeMirror pre").css('font-size',"16pt");
+  }
+
+  else if (size == '17'){
+    $(".CodeMirror pre").css('font-size',"17pt");
+  }
+
+  else if (size == '18'){
+    $(".CodeMirror pre").css('font-size',"18pt");
+  }
+
+  else if (size == '19'){
+    $(".CodeMirror pre").css('font-size',"19pt");
+  }
+
+  else if (size == '20'){
+    $(".CodeMirror pre").css('font-size',"20pt");
+  }
+
+  else if (size == '22'){
+    $(".CodeMirror pre").css('font-size',"22pt");
+  }
+
+  else if (size == '24'){
+    $(".CodeMirror pre").css('font-size',"24pt");
+  }
+
+  else if (size == '26'){
+    $(".CodeMirror pre").css('font-size',"26pt");
+  }
+
+  else if (size == '28'){
+    $(".CodeMirror pre").css('font-size',"28pt");
+  }
+
+  else if (size == '32'){
+    $(".CodeMirror pre").css('font-size',"32pt");
+  }
+
+  else if (size == '36'){
+    $(".CodeMirror pre").css('font-size',"36pt");
+  }
+
+  else if (size == '40'){
+    $(".CodeMirror pre").css('font-size',"40pt");
+  }
+
+  else if (size == '44'){
+    $(".CodeMirror pre").css('font-size',"44pt");
+  }
+
+  else if (size == '48'){
+    $(".CodeMirror pre").css('font-size',"48pt");
+  }
+
+  else if (size == '54'){
+    $(".CodeMirror pre").css('font-size',"54pt");
+  }
+
+  else if (size == '60'){
+    $(".CodeMirror pre").css('font-size',"60pt");
+  }
+
+  else if (size == '66'){
+    $(".CodeMirror pre").css('font-size',"66pt");
+  }
+
+  else if (size == '72'){
+    $(".CodeMirror pre").css('font-size',"72pt");
+  }
+
+  else {
+    $(".CodeMirror pre").css('font-size',"8pt");
   }
 
 }
@@ -502,10 +607,16 @@ function loadFileAsText() {
     var textFromFileLoaded = fileLoadedEvent.target.result;
 
     codemirror.getDoc().setValue(textFromFileLoaded);
-    filename.value = file.value.replace('.md','');
+    filename.value = file.value.split('/').pop().replace('.md','');
     document.getElementById('toLoad-alert').style.visibility = "hidden";
+
+    document.getElementById('editor').value = codemirror.getValue();
+    document.getElementById('output').innerHTML = marked(document.getElementById('editor').value);
+
+    return word_counter();
   };
   fileReader.readAsText(fileToLoad, "UTF-8");
+
 }
 
 document.getElementById('saveMd').onclick = function(){
