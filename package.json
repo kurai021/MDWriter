@@ -1,6 +1,6 @@
 {
   "name": "MDWriter",
-  "version": "16.03-lorentz",
+  "version": "16.03.1-lorentz",
   "main": "app/index.html",
   "window": {
     "title": "MDWriter",
