@@ -3,6 +3,7 @@ node_modules
 .DS_Store
 Thumbs.db
 /build/
+/cache/
 /releases/
 /tmp/
 /app/assets/components
