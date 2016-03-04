@@ -38,7 +38,6 @@ $ bower install
 * ~~In file name is necessary to clean the name -> /foo/bar.md to bar.~~
 * ~~Change font size in live.~~
 * Support for Blogger, Tumblr and Wordpress (maybe Ghost).
-* Font size change support.
 * Print support?.
 * Optimize the code
 * Create a task for minification.
@@ -47,3 +46,9 @@ $ bower install
 ## License
 
 Check LICENSE for information.
+
+## Donations
+
+If this project was useful for you, you can donate some BTC
+
+<a href="bitcoin:19bAJaFzHRTYPW5SrbzzfPbZ5jLAEotCVa?amount=0.024&label=support MDWriter&message=Hi, thanks for create MDWriter!"><img src="./assets/bitcoin.svg" alt="bitcoin-btn"></a>
