@@ -1,7 +1,7 @@
 # MDWriter
 A markdown desktop editor with steroids powered by the web.
 
-![mdwriter-demo](http://i.imgur.com/849DVZs.gif)
+![](http://i.imgur.com/849DVZs.gif)
 
 ## Features
 * Save to Markdown
