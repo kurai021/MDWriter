@@ -17,7 +17,7 @@ A markdown desktop editor with steroids powered by the web.
 ## Getting Started
 
 ### Clone from source
-<pre><code>$ git clone git@github.com:kurai021/MDWriter.git
+<pre><code>$ git clone https://github.com/kurai021/MDWriter.git
 $ cd MDWriter/
 </code></pre>
 

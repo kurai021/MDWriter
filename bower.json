@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "foundation": "~5.5.1",
-    "highlight.js": "git@github.com:isagalaev/highlight.js.git",
+    "highlight.js": "https://github.com/isagalaev/highlight.js.git",
     "marked": "~0.3.3",
     "fontawesome": "~4.3.0",
     "angular": "~1.4.0",
