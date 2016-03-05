@@ -14,7 +14,7 @@ A markdown desktop editor with steroids powered by the web.
 * Markdown syntax helper and shortcuts
 * And a nice UI :D
 
-## Installation
+## Getting Started
 
 ### Clone from source
 <pre><code>$ git clone git@github.com:kurai021/MDWriter.git
@@ -48,7 +48,6 @@ $ cd MDWriter/
 * Actually you can build this proyect for GNU/Linux, OSX and Windows only in x64, but if you want to make a build for x86, you can add this in gulpfile.js in this line
 <pre><code>platforms: ['linux64', 'osx64', 'win64'],</code></pre>
 
-
 ## ToDo
 
 * Actually jsPDF is unstable, is necessary to find a module that does the same function or create a module from scratch for HTML5 to PDF.
@@ -59,7 +58,11 @@ $ cd MDWriter/
 * Print support?.
 * Optimize the code
 * Create a task for minification.
-* Delete all bower dependencies and use only node package?
+* Delete all bower dependencies and use only node package? 
+
+## How to Contribute?
+
+If you want to contribute to this project, create a issue with "request to contribute" as a title and a brief description of what do you want to do, so I will add you as a colaborator.
 
 ## License
 
