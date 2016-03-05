@@ -24,8 +24,6 @@ $ bower install
 
 ### Testing with NW
 
-* Install NW package globally
-<pre><code>$ sudo npm install -g nw</code></pre>
 * run gulp test in terminal
 
 ## Build
