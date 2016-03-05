@@ -12,6 +12,9 @@ $ npm install
 $ bower install
 </code></pre>
 
+3. Build Highlight.js Bower package (**/app/assets/components/highlight.js**) as seen in the [documentation](http://highlightjs.readthedocs.org/en/latest/building-testing.html)
+<pre><code>node tools/build.js :common</code></pre>
+
 ## Test
 
 ### Testing in browser
