@@ -1,7 +1,7 @@
 # MDWriter
 A markdown desktop editor with steroids powered by the web.
 
-![](http://i.imgur.com/849DVZs.gif)
+![Imgur](https://i.imgur.com/ZIRSsQ8.gif)
 
 ## Features
 * Save to Markdown
@@ -15,7 +15,7 @@ A markdown desktop editor with steroids powered by the web.
 * And a nice UI :D
 
 ## Installation
-------
+
 ### Clone from source
 <pre><code>$ git clone git@github.com:kurai021/MDWriter.git
 $ cd MDWriter/
@@ -34,7 +34,7 @@ $ cd MDWriter/
 <pre><code>node tools/build.js :common</code></pre>
 
 ## Test
---------
+
 ### Testing in browser
 
 * For testing in browser you need to change **{app: 'firefox-aurora'}** in gulpfile.js for your browser order.
