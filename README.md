@@ -30,7 +30,9 @@ $ cd MDWriter/
 <pre><code>$ bower install
 </code></pre>
 
-3. Build Highlight.js Bower package (**/app/assets/components/highlight.js**) as seen in the [documentation](http://highlightjs.readthedocs.org/en/latest/building-testing.html)
+3. Enter to Highlight.js Bower package (**/app/assets/components/highlight.js**) and install its dependencies with npm install.
+
+4. Build Highlight.js as seen in the [documentation](http://highlightjs.readthedocs.org/en/latest/building-testing.html)
 <pre><code>node tools/build.js :common</code></pre>
 
 ## Test

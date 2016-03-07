@@ -1,14 +1,29 @@
 document.getElementById('savePDF').onclick = function(){
-	var specialElementHandlers = function (element,renderer) {
-		return true;
-	}
 
-	var doc = new jsPDF();
+	var doc = new jsPDF('p','pt','a4');
 
-	doc.fromHTML($('#output').get(0), 15, 15, {
-		'width': 170,
+	specialElementHandlers = {
+		// element with id of "bypass" - jQuery style selector
+		function (element, renderer) {
+			// true = "handled elsewhere, bypass text extraction"
+			return true
+		}
+	};
+
+	margins = {
+		top: 20,
+		bottom: 20,
+		left: 20,
+		width: 522
+  };
+
+	doc.fromHTML(document.getElementById("output"), margins.left, margins.top, {
+		'width': margins.width,
 		'elementHandlers': specialElementHandlers
-	});
+	},
 
-	doc.save(document.getElementById('filename').value + '.pdf');
+	function(dispose){
+		doc.save(document.getElementById("filename").value + '.pdf');
+	}, margins);
+
 }
