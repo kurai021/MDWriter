@@ -82,6 +82,19 @@ ul.off-canvas-list li a:hover {
   padding: 15px;
 }
 
+#alert-markdown-help .syntax {
+  height: 500px;
+}
+
+#alert-markdown-help .emoji-list {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+#alert-markdown-help .emoji-list li {
+  list-style: none;
+}
+
 #toLoad-alert {
   top:50px;
   left:30%;

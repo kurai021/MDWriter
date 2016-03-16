@@ -1,0 +1,15 @@
+@font-face {
+  font-family: EmojiOne;
+  src: url(EmojiOne.ttf);
+}
+
+.emoji {
+  font-family: EmojiOne;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+#alert-markdown-help .emoji-list li{
+  font-family: EmojiOne;
+  font-size: 20px;
+}

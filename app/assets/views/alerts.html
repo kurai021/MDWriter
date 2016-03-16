@@ -1,6 +1,6 @@
 <div id="toLoad-alert" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
   <input class="button secondary" id="filetoload" type="file" accept=".md">
-  <button class="button success radius" onclick="loadFileAsText()" id="loadFile">Load File</button>
+  <button class="button success radius" id="loadFile">Load File</button>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
@@ -45,6 +45,7 @@
         <option value="zenburn">zenburn</option>
       </select>
     </label>
+    <a class="button success radius" id="accept-change-theme" href="#">Accept</a>
 
     <label>Font size:
       <select id="chsize" name="chsize">
@@ -76,7 +77,7 @@
         <option value="72">72</option>
       </select>
     </label>
-    <a class="button success radius" id="accept-change-theme" href="#">Accept</a>
+    <a class="button success radius" id="accept-size-font" href="#">Accept</a>
 
     <label>Highlighting theme:
       <select name="chhighlightthemes" id="chhighlightthemes">

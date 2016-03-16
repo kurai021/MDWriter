@@ -57,10 +57,11 @@ $ cd MDWriter/
 * ~~In file name is necessary to clean the name -> /foo/bar.md to bar.~~
 * ~~Change font size in live.~~
 * Support for Blogger, Tumblr and Wordpress (maybe Ghost).
+* Emoji support
 * Print support?.
 * Optimize the code
 * Create a task for minification.
-* Delete all bower dependencies and use only node package? 
+* Delete all bower dependencies and use only node package?
 
 ## How to Contribute?
 

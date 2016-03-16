@@ -20,213 +20,276 @@ document.getElementById('filename').value = 'new-document-' + mm + '-' + dd + '-
 //editor theme changer
 document.getElementById('accept-change-theme').onclick = function(){
   var theme = document.getElementById('chthemes').selectedOptions[0].text;
-  var size = document.getElementById('chsize').selectedOptions[0].text;
 
   if(theme == '3024-day'){
     codemirror.setOption("theme", "3024-day");
+    codemirror.refresh();
   }
   else if(theme == '3024-night'){
     codemirror.setOption("theme", "3024-night");
+    codemirror.refresh();
   }
   else if(theme == 'ambiance'){
     codemirror.setOption("theme", "ambiance");
+    codemirror.refresh();
   }
   else if(theme == 'base16-dark'){
     codemirror.setOption("theme", "base16-dark");
+    codemirror.refresh();
   }
   else if(theme == 'base16-light'){
     codemirror.setOption("theme", "base16-light");
+    codemirror.refresh();
   }
   else if(theme == 'blackboard'){
     codemirror.setOption("theme", "blackboard");
+    codemirror.refresh();
   }
   else if(theme == 'cobalt'){
     codemirror.setOption("theme", "cobalt");
+    codemirror.refresh();
   }
   else if(theme == 'colorforth'){
     codemirror.setOption("theme", "colorforth");
+    codemirror.refresh();
   }
   else if(theme == 'eclipse'){
     codemirror.setOption("theme", "ecplise");
+    codemirror.refresh();
   }
   else if(theme == 'elegant'){
     codemirror.setOption("theme", "elegant");
+    codemirror.refresh();
   }
   else if(theme == 'erlang-dark'){
     codemirror.setOption("theme", "erlang-dark");
+    codemirror.refresh();
   }
   else if(theme == 'lesser-dark'){
     codemirror.setOption("theme", "lesser-dark");
+    codemirror.refresh();
   }
   else if(theme == 'liquibyte'){
     codemirror.setOption("theme", "liquibyte");
+    codemirror.refresh();
   }
   else if(theme == 'mbo'){
     codemirror.setOption("theme", "mbo");
+    codemirror.refresh();
   }
   else if(theme == 'midnight'){
     codemirror.setOption("theme", "midnight");
+    codemirror.refresh();
   }
   else if(theme == 'monokai'){
     codemirror.setOption("theme", "monokai");
+    codemirror.refresh();
   }
   else if(theme == 'neat'){
     codemirror.setOption("theme", "neat");
+    codemirror.refresh();
   }
   else if(theme == 'neo'){
     codemirror.setOption("theme", "neo");
+    codemirror.refresh();
   }
   else if(theme == 'night'){
     codemirror.setOption("theme", "night");
+    codemirror.refresh();
   }
   else if(theme == 'paraiso-dark'){
     codemirror.setOption("theme", "paraiso-dark");
+    codemirror.refresh();
   }
   else if(theme == 'paraiso-light'){
     codemirror.setOption("theme", "paraiso-light");
+    codemirror.refresh();
   }
   else if(theme == 'pastel-on-dark'){
     codemirror.setOption("theme", "pastel-on-dark");
+    codemirror.refresh();
   }
   else if(theme == 'rubyblue'){
     codemirror.setOption("theme", "rubyblue");
+    codemirror.refresh();
   }
   else if(theme == 'solarized'){
     codemirror.setOption("theme", "solarized");
+    codemirror.refresh();
   }
   else if(theme == 'the-matrix'){
     codemirror.setOption("theme", "the-matrix");
+    codemirror.refresh();
   }
   else if(theme == 'tomorrow-night-bright'){
     codemirror.setOption("theme", "tomorrow-night-bright");
+    codemirror.refresh();
   }
   else if(theme == 'tomorrow-night-eighties'){
     codemirror.setOption("theme", "tomorrow-night-eighties");
+    codemirror.refresh();
   }
   else if(theme == 'ttcn'){
     codemirror.setOption("theme", "ttcn");
+    codemirror.refresh();
   }
   else if(theme == 'twilight'){
     codemirror.setOption("theme", "twilight");
+    codemirror.refresh();
   }
   else if(theme == 'vibrant-ink'){
     codemirror.setOption("theme", "vibrant-ink");
+    codemirror.refresh();
   }
   else if(theme == 'xq-dark'){
     codemirror.setOption("theme", "xq-dark");
+    codemirror.refresh();
   }
   else if(theme == 'xq-light'){
     codemirror.setOption("theme", "xq-light");
+    codemirror.refresh();
   }
   else if(theme == 'zenburn'){
     codemirror.setOption("theme", "zenburn");
+    codemirror.refresh();
   }
   else{
     codemirror.setOption("theme", "mdn-like");
+    codemirror.refresh();
   }
+}
+
+document.getElementById('accept-size-font').onclick = function(){
+  var size = document.getElementById('chsize').selectedOptions[0].text;
 
   if (size == '9'){
-    $(".CodeMirror pre").css('font-size',"9pt");
+    $(".CodeMirror").css('font-size',"9px");
+    codemirror.refresh();
   }
 
   else if (size == '10'){
-    $(".CodeMirror pre").css('font-size',"10pt");
+    $(".CodeMirror").css('font-size',"10px");
+    codemirror.refresh();
   }
 
   else if (size == '11'){
-    $(".CodeMirror pre").css('font-size',"11pt");
+    $(".CodeMirror").css('font-size',"11px");
+    codemirror.refresh();
   }
 
   else if (size == '12'){
-    $(".CodeMirror pre").css('font-size',"12pt");
+    $(".CodeMirror").css('font-size',"12px");
+    codemirror.refresh();
   }
 
   else if (size == '13'){
-    $(".CodeMirror pre").css('font-size',"13pt");
+    $(".CodeMirror").css('font-size',"13px");
+    codemirror.refresh();
   }
 
   else if (size == '14'){
-    $(".CodeMirror pre").css('font-size',"14pt");
+    $(".CodeMirror").css('font-size',"14px");
+    codemirror.refresh();
   }
 
   else if (size == '15'){
-    $(".CodeMirror pre").css('font-size',"15pt");
+    $(".CodeMirror").css('font-size',"15px");
+    codemirror.refresh();
   }
 
   else if (size == '16'){
-    $(".CodeMirror pre").css('font-size',"16pt");
+    $(".CodeMirror").css('font-size',"16px");
+    codemirror.refresh();
   }
 
   else if (size == '17'){
-    $(".CodeMirror pre").css('font-size',"17pt");
+    $(".CodeMirror").css('font-size',"17px");
+    codemirror.refresh();
   }
 
   else if (size == '18'){
-    $(".CodeMirror pre").css('font-size',"18pt");
+    $(".CodeMirror").css('font-size',"18px");
+    codemirror.refresh();
   }
 
   else if (size == '19'){
-    $(".CodeMirror pre").css('font-size',"19pt");
+    $(".CodeMirror").css('font-size',"19px");
+    codemirror.refresh();
   }
 
   else if (size == '20'){
-    $(".CodeMirror pre").css('font-size',"20pt");
+    $(".CodeMirror").css('font-size',"20px");
+    codemirror.refresh();
   }
 
   else if (size == '22'){
-    $(".CodeMirror pre").css('font-size',"22pt");
+    $(".CodeMirror").css('font-size',"22px");
+    codemirror.refresh();
   }
 
   else if (size == '24'){
-    $(".CodeMirror pre").css('font-size',"24pt");
+    $(".CodeMirror").css('font-size',"24px");
+    codemirror.refresh();
   }
 
   else if (size == '26'){
-    $(".CodeMirror pre").css('font-size',"26pt");
+    $(".CodeMirror").css('font-size',"26px");
+    codemirror.refresh();
   }
 
   else if (size == '28'){
-    $(".CodeMirror pre").css('font-size',"28pt");
+    $(".CodeMirror").css('font-size',"28px");
+    codemirror.refresh();
   }
 
   else if (size == '32'){
-    $(".CodeMirror pre").css('font-size',"32pt");
+    $(".CodeMirror").css('font-size',"32px");
+    codemirror.refresh();
   }
 
   else if (size == '36'){
-    $(".CodeMirror pre").css('font-size',"36pt");
+    $(".CodeMirror").css('font-size',"36px");
+    codemirror.refresh();
   }
 
   else if (size == '40'){
-    $(".CodeMirror pre").css('font-size',"40pt");
+    $(".CodeMirror").css('font-size',"40px");
+    codemirror.refresh();
   }
 
   else if (size == '44'){
-    $(".CodeMirror pre").css('font-size',"44pt");
+    $(".CodeMirror").css('font-size',"44px");
+    codemirror.refresh();
   }
 
   else if (size == '48'){
-    $(".CodeMirror pre").css('font-size',"48pt");
+    $(".CodeMirror").css('font-size',"48px");
+    codemirror.refresh();
   }
 
   else if (size == '54'){
-    $(".CodeMirror pre").css('font-size',"54pt");
+    $(".CodeMirror").css('font-size',"54px");
+    codemirror.refresh();
   }
 
   else if (size == '60'){
-    $(".CodeMirror pre").css('font-size',"60pt");
+    $(".CodeMirror").css('font-size',"60px");
+    codemirror.refresh();
   }
 
   else if (size == '66'){
-    $(".CodeMirror pre").css('font-size',"66pt");
+    $(".CodeMirror").css('font-size',"66px");
+    codemirror.refresh();
   }
 
   else if (size == '72'){
-    $(".CodeMirror pre").css('font-size',"72pt");
+    $(".CodeMirror").css('font-size',"72px");
+    codemirror.refresh();
   }
 
   else {
-    $(".CodeMirror pre").css('font-size',"8pt");
+    $(".CodeMirror").css('font-size',"8px");
+    codemirror.refresh();
   }
 
 }
@@ -501,10 +564,8 @@ document.getElementById("accept-change-highlight-theme").onclick = function(){
 
 }
 
-
-
 document.body.onkeyup = function(e) {
-  document.getElementById('editor').value = codemirror.getValue();
+  myTextarea.value = codemirror.getValue();
 
   marked.setOptions({
     renderer: new marked.Renderer(),
@@ -537,7 +598,7 @@ document.body.onkeyup = function(e) {
     }
   });
 
-  document.getElementById('output').innerHTML = marked(document.getElementById('editor').value);
+  document.getElementById('output').innerHTML = marked(myTextarea.value);
 
   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
 
@@ -595,62 +656,279 @@ document.body.onkeyup = function(e) {
   if(e.altKey && e.ctrlKey && e.keyCode == 51){
     codemirror.getDoc().setValue(codemirror.getValue() + "### ");
   }
-}
 
-function loadFileAsText() {
-  var file = document.getElementById("filetoload");
-  var fileToLoad = document.getElementById("filetoload").files[0];
-  var filename = document.getElementById('filename');
-  var fileReader = new FileReader();
+  /*--emoji support--*/
 
-  fileReader.onload = function(fileLoadedEvent){
-    var textFromFileLoaded = fileLoadedEvent.target.result;
-
-    codemirror.getDoc().setValue(textFromFileLoaded);
-    filename.value = file.value.split('/').pop().replace('.md','');
-    document.getElementById('toLoad-alert').style.visibility = "hidden";
-
-    document.getElementById('editor').value = codemirror.getValue();
-    document.getElementById('output').innerHTML = marked(document.getElementById('editor').value);
-
-    return word_counter();
-  };
-  fileReader.readAsText(fileToLoad, "UTF-8");
-
-}
-
-document.getElementById('saveMd').onclick = function(){
-  return saveFileAsText();
-}
-
-function saveFileAsText() {
-
-  var textToWrite = codemirror.getValue();
-  var textFileAsBlob = new Blob([textToWrite], {type:'text/x-markdown'});
-  var fileNameToSaveAs = document.getElementById('filename').value + '.md';
-
-  var downloadLink = document.createElement("a");
-
-  downloadLink.download = fileNameToSaveAs;
-  downloadLink.innerHTML = "Download File";
-
-  if (window.webkitURL != null) {
-
-    // Chrome allows the link to be clicked
-    // without actually adding it to the DOM.
-    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+  var emoji_array = {
+    grinning: {
+      keyword: ':grinning:',
+      replace: '😀'
+    },
+    grin: {
+      keyword: ':grin:',
+      replace: '😁'
+    },
+    joy: {
+      keyword: ':joy:',
+      replace: '😂'
+    },
+    smiley: {
+      keyword: ':smiley:',
+      replace: '😃'
+    },
+    smile: {
+      keyword: ':smile:',
+      replace: '😄'
+    },
+    sweat_smile: {
+      keyword: ':sweat_smile:',
+      replace: '😅'
+    },
+    satisfied: {
+      keyword: ':satisfied:',
+      replace: '😆'
+    },
+    innocent: {
+      keyword: ':innocent:',
+      replace: '😇'
+    },
+    smiling_imp: {
+      keyword: ':smiling_imp:',
+      replace: '😈'
+    },
+    wink: {
+      keyword: ':wink:',
+      replace: '😉'
+    },
+    blush: {
+      keyword: ':blush:',
+      replace: '😊'
+    },
+    yum: {
+      keyword: ':yum:',
+      replace: '😋'
+    },
+    relieved: {
+      keyword: ':relieved:',
+      replace: '😌'
+    },
+    heart_eyes: {
+      keyword: ':heart_eyes:',
+      replace: '😍'
+    },
+    sunglasses: {
+      keyword: ':sunglasses:',
+      replace: '😎'
+    },
+    smirk: {
+      keyword: ':smirk:',
+      replace: '😏'
+    },
+    neutral_face: {
+      keyword: ':neutral_face:',
+      replace: '😐'
+    },
+    expressionless: {
+      keyword: ':expressionless:',
+      replace: '😑'
+    },
+    unamused: {
+      keyword: ':unamused:',
+      replace: '😒'
+    },
+    sweat: {
+      keyword: ':sweat:',
+      replace: '😓'
+    },
+    pensive: {
+      keyword: ':pensive:',
+      replace: '😔'
+    },
+    confused: {
+      keyword: ':confused:',
+      replace: '😕'
+    },
+    confounded: {
+      keyword: ':confounded:',
+      replace: '😖'
+    },
+    kissing: {
+      keyword: ':kissing:',
+      replace: '😗'
+    },
+    kissing_heart: {
+      keyword: ':kissing_heart:',
+      replace: '😘'
+    },
+    kissing_smiling_eyes: {
+      keyword: ':kissing_smiling_eyes:',
+      replace: '😙'
+    },
+    kissing_closed_eyes: {
+      keyword: ':kissing_closed_eyes:',
+      replace: '😚'
+    },
+    stuck_out_tongue: {
+      keyword: ':stuck_out_tongue:',
+      replace: '😛'
+    },
+    stuck_out_tongue_winking_eye: {
+      keyword: ':stuck_out_tongue_winking_eye:',
+      replace: '😜'
+    },
+    stuck_out_tongue_closed_eyes: {
+      keyword: ':stuck_out_tongue_closed_eyes:',
+      replace: '😝'
+    },
+    disappointed: {
+      keyword: ':disappointed:',
+      replace: '😞'
+    },
+    worried: {
+      keyword: ':worried:',
+      replace: '😟'
+    },
+    angry: {
+      keyword: ':angry:',
+      replace: '😠'
+    },
+    rage: {
+      keyword: ':rage:',
+      replace: '😡'
+    },
+    cry: {
+      keyword: ':cry:',
+      replace: '😢'
+    },
+    persevere: {
+      keyword: ':persevere:',
+      replace: '😣'
+    },
+    triumph: {
+      keyword: ':triumph:',
+      replace: '😤'
+    },
+    disappointed_relieved: {
+      keyword: ':disappointed_relieved:',
+      replace: '😥'
+    },
+    frowning: {
+      keyword: ':frowning:',
+      replace: '😦'
+    },
+    anguished: {
+      keyword: ':anguished:',
+      replace: '😧'
+    },
+    fearful: {
+      keyword: ':fearful:',
+      replace: '😨'
+    },
+    weary: {
+      keyword: ':weary:',
+      replace: '😩'
+    },
+    sleepy: {
+      keyword: ':sleepy:',
+      replace: '😪'
+    },
+    tired_face: {
+      keyword: ':tired_face:',
+      replace: '😫'
+    },
+    grimacing: {
+      keyword: ':grimacing:',
+      replace: '😬'
+    },
+    sob: {
+      keyword: ':sob:',
+      replace: '😭'
+    },
+    open_mouth: {
+      keyword: ':open_mouth:',
+      replace: '😮'
+    },
+    hushed: {
+      keyword: ':hushed:',
+      replace: '😯'
+    },
+    cold_sweat: {
+      keyword: ':cold_sweat:',
+      replace: '😰'
+    },
+    scream: {
+      keyword: ':scream:',
+      replace: '😱'
+    },
+    astonished: {
+      keyword: ':astonished:',
+      replace: '😲'
+    },
+    flushed: {
+      keyword: ':flushed:',
+      replace: '😳'
+    },
+    sleeping: {
+      keyword: ':sleeping:',
+      replace: '😴'
+    },
+    dizzy_face: {
+      keyword: ':dizzy_face:',
+      replace: '😵'
+    },
+    no_mouth: {
+      keyword: ':no_mouth:',
+      replace: '😶'
+    },
+    mask: {
+      keyword: ':mask:',
+      replace: '😷'
+    },
+    smile_cat: {
+      keyword: ':smile_cat:',
+      replace: '😸'
+    },
+    joy_cat: {
+      keyword: ':joy_cat:',
+      replace: '😹'
+    },
+    smiley_cat: {
+      keyword: ':smiley_cat:',
+      replace: '😺'
+    },
+    heart_cat: {
+      keyword: ':heart cat:',
+      replace: '😻'
+    },
+    smile_cat: {
+      keyword: ':smile cat:',
+      replace: '😼'
+    },
+    heart_eyes_cat: {
+      keyword: ':heart_eyes_cat:',
+      replace: '😽'
+    },
+    pouting_cat: {
+      keyword: ':pouting_cat:',
+      replace: '😾'
+    },
+    crying_cat_face: {
+      keyword: ':crying_cat_face:',
+      replace: '😿'
+    },
+    scream_cat: {
+      keyword: ':scream_cat:',
+      replace: '🙀'
+    }
   }
 
-  else {
+  var output;
+  output = document.getElementById("output");
 
-    // Firefox requires the link to be added to the DOM
-    // before it can be clicked.
-    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-    downloadLink.onclick = destroyClickedElement;
-    downloadLink.style.display = "none";
-    document.body.appendChild(downloadLink);
-  }
-
-  downloadLink.click();
+  Object.getOwnPropertyNames(emoji_array).forEach(function(key){
+    var emoji;
+    emoji = emoji_array[key];
+    output.innerHTML = output.innerHTML.replace(emoji.keyword,'<span class="emoji ' + key +'">'+ emoji.replace +'</span>');
+  });
 
 }
