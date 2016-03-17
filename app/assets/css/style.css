@@ -86,7 +86,7 @@ ul.off-canvas-list li a:hover {
   height: 500px;
 }
 
-#alert-markdown-help .emoji-list {
+#alert-markdown-help .emoji-list, #alert-markdown-help .syntax {
   height: 500px;
   overflow-y: scroll;
 }

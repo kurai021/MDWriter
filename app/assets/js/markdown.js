@@ -590,9 +590,11 @@ document.body.onkeyup = function(e) {
 
       try {
         res = hljs.highlightAuto(code).value;
-      } catch(e){
+      }
+      catch(e){
 
-      } finally {
+      }
+      finally {
         return res || code;
       }
     }
@@ -929,6 +931,31 @@ document.body.onkeyup = function(e) {
     var emoji;
     emoji = emoji_array[key];
     output.innerHTML = output.innerHTML.replace(emoji.keyword,'<span class="emoji ' + key +'">'+ emoji.replace +'</span>');
+  });
+
+  var checkboxes_array = {
+    checkbox_uncheck: {
+      keyword: '[ ]',
+      replace: '<i class="fa fa-square"></i> '
+    },
+    checkbox_check: {
+      keyword: '[x]',
+      replace: '<i class="fa fa-check-square"></i> '
+    },
+    circle_checkbox_uncheck: {
+      keyword: '( )',
+      replace: '<i class="fa fa-circle"></i> '
+    },
+    circle_checkbox_check: {
+      keyword: '(x)',
+      replace: '<i class="fa fa-check-circle"></i> '
+    }
+  }
+
+  Object.getOwnPropertyNames(checkboxes_array).forEach(function(key){
+    var checkboxes;
+    checkboxes = checkboxes_array[key];
+    output.innerHTML = output.innerHTML.replace(checkboxes.keyword, checkboxes.replace);
   });
 
 }
