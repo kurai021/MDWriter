@@ -5,7 +5,43 @@ var codemirror = CodeMirror.fromTextArea(myTextarea, {
   lineWrapping: true,
   mode: "markdown",
   theme: "mdn-like",
-  extraKeys: {"Enter": "newlineAndIndentContinueMarkdownList"},
+  extraKeys: {
+    'Cmd-B': 'markdownBold',
+    'Cmd-I': 'markdownItalic',
+    'Cmd-L': 'markdownLink',
+    'Cmd-Alt-S': 'markdownStrike',
+    'Cmd-Alt-K': 'markdownInlineCode',
+    'Cmd-Alt-O': 'markdownOrderedList',
+    'Cmd-Alt-U': 'markdownUnorderedList',
+    'Cmd-Alt-I': 'markdownImage',
+    'Cmd-Alt-B': 'markdownBlockQuote',
+    'Cmd-Alt-1': 'markdownHeading1',
+    'Cmd-Alt-2': 'markdownHeading2',
+    'Cmd-Alt-3': 'markdownHeading3',
+    'Cmd-Alt-4': 'markdownHeading4',
+    'Cmd-Alt-5': 'markdownHeading5',
+    'Cmd-Alt-6': 'markdownHeading6',
+    'Cmd-Z': 'markdownUndo',
+    'Cmd-Shift-Z': 'markdownRedo',
+    'Ctrl-B': 'markdownBold',
+    'Ctrl-I': 'markdownItalic',
+    'Ctrl-L': 'markdownLink',
+    'Ctrl-Alt-S': 'markdownStrike',
+    'Ctrl-Alt-K': 'markdownInlineCode',
+    'Ctrl-Alt-O': 'markdownOrderedList',
+    'Ctrl-Alt-U': 'markdownUnorderedList',
+    'Ctrl-Alt-I': 'markdownImage',
+    'Ctrl-Alt-B': 'markdownBlockQuote',
+    'Ctrl-Alt-1': 'markdownHeading1',
+    'Ctrl-Alt-2': 'markdownHeading2',
+    'Ctrl-Alt-3': 'markdownHeading3',
+    'Ctrl-Alt-4': 'markdownHeading4',
+    'Ctrl-Alt-5': 'markdownHeading5',
+    'Ctrl-Alt-6': 'markdownHeading6',
+    'Ctrl-Z': 'markdownUndo',
+    'Ctrl-Shift-Z': 'markdownRedo',
+    "Enter": "newlineAndIndentContinueMarkdownList"
+  },
   autoCloseBrackets: true,
   viewportMargin: 40
 });
@@ -603,61 +639,6 @@ document.body.onkeyup = function(e) {
   document.getElementById('output').innerHTML = marked(myTextarea.value);
 
   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-
-  //ctrl B
-  if(e.ctrlKey && e.keyCode == 66){
-    codemirror.getDoc().setValue(codemirror.getValue() + "****");
-  }
-
-  //ctrl I
-  if(e.ctrlKey && e.keyCode == 73){
-    codemirror.getDoc().setValue(codemirror.getValue() + "**");
-  }
-
-  //alt ctrl U
-  if(e.altKey && e.ctrlKey && e.keyCode == 85){
-    codemirror.getDoc().setValue(codemirror.getValue() + "~~~~");
-  }
-
-  //ctrl K
-  if(e.ctrlKey && e.keyCode == 75){
-    codemirror.getDoc().setValue(codemirror.getValue() + "[title](https://)");
-  }
-
-  //alt K
-  if(e.altKey && e.keyCode == 75){
-    codemirror.getDoc().setValue(codemirror.getValue() + "<pre><code></code><pre>");
-  }
-
-  //alt I
-  if(e.altKey && e.keyCode == 73){
-    codemirror.getDoc().setValue(codemirror.getValue() + "![title](https://)");
-  }
-
-  //ctrl L
-  if(e.ctrlKey && e.keyCode == 76){
-    codemirror.getDoc().setValue(codemirror.getValue() + "* ");
-  }
-
-  //ctrl Q
-  if(e.ctrlKey && e.keyCode == 81){
-    codemirror.getDoc().setValue(codemirror.getValue() + "> ");
-  }
-
-  //alt ctrl 1
-  if(e.altKey && e.ctrlKey && e.keyCode == 49){
-    codemirror.getDoc().setValue(codemirror.getValue() + "# ");
-  }
-
-  //alt ctrl 2
-  if(e.altKey && e.ctrlKey && e.keyCode == 50){
-    codemirror.getDoc().setValue(codemirror.getValue() + "## ");
-  }
-
-  //alt ctrl 3
-  if(e.altKey && e.ctrlKey && e.keyCode == 51){
-    codemirror.getDoc().setValue(codemirror.getValue() + "### ");
-  }
 
   /*--emoji support--*/
 
