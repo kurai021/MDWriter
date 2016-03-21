@@ -39,6 +39,14 @@
     cm.setCursor(pos);
     cm.focus();
   };
+  CodeMirror.commands.markdownCode = function(cm) {
+    var pos = cm.getCursor('end');
+
+    cm.replaceSelection('```\n'+ cm.getSelection() +'\n```');
+    pos.ch += 3;
+    cm.setCursor(pos);
+    cm.focus();
+  };
   CodeMirror.commands.markdownImage = function(cm) {
     var pos = cm.getCursor('end');
 

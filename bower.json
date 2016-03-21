@@ -25,6 +25,9 @@
     "angular-route": "~1.4.0",
     "CodeMirror": "~5.3.0",
     "js-beautify": "~1.5.10",
-    "jspdf": "^1.2.61"
+    "jspdf": "https://github.com/MrRio/jsPDF.git"
+  },
+  "devDependencies": {
+    "mermaid": "^0.5.8"
   }
 }

@@ -203,6 +203,23 @@ ul.off-canvas-list li a:hover {
   padding-left: 7px;
 }
 
+#output a,
+#output a:link,
+#output a:hover,
+#output a:active,
+#output a:visited,
+.syntax a,
+.syntax a:link,
+.syntax a:hover,
+.syntax a:active,
+.syntax a:visited{
+  color: #4183c4;
+}
+
+#output a:hover {
+  text-decoration: underline;
+}
+
 a {
   color: #3D3D3D;
 }

@@ -4,7 +4,7 @@ A markdown desktop editor with steroids powered by the web.
 ![Imgur](http://i.imgur.com/s5iuoi6.gif)
 
 ## Features
-* Save to Markdown
+* Save to Markdown (GFM)
 * Export to HTML and PDF
 * Syntax Highlighting
 * Editor and highlighting themes and font size changer
@@ -12,6 +12,8 @@ A markdown desktop editor with steroids powered by the web.
 * Blogger support (experimental)
 * Word counter
 * Markdown syntax helper and shortcuts
+* Emoji and shortcuts support
+* Mermaid for Flowchart/Graphs and Gantt diagram support, [see basic syntax](http://knsv.github.io/mermaid/#graph)
 * And a nice UI :D
 
 ## Getting Started
@@ -58,7 +60,9 @@ $ cd MDWriter/
 * ~~Change font size in live.~~
 * Support for Blogger, Tumblr and Wordpress (maybe Ghost).
 * ~~Emoji support~~ (partial)
+* ~~Flowchart/Graphs and Gantt support~~
 * ~~Separate load/save as .md file from markdown.js~~
+* ~~Markdown shortcuts fixed~~
 * Print support?.
 * Optimize the code
 * Create a task for minification.

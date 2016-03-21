@@ -11,6 +11,7 @@ var codemirror = CodeMirror.fromTextArea(myTextarea, {
     'Cmd-L': 'markdownLink',
     'Cmd-Alt-S': 'markdownStrike',
     'Cmd-Alt-K': 'markdownInlineCode',
+    'Cmd-Alt-C': 'markdownCode',
     'Cmd-Alt-O': 'markdownOrderedList',
     'Cmd-Alt-U': 'markdownUnorderedList',
     'Cmd-Alt-I': 'markdownImage',
@@ -28,6 +29,7 @@ var codemirror = CodeMirror.fromTextArea(myTextarea, {
     'Ctrl-L': 'markdownLink',
     'Ctrl-Alt-S': 'markdownStrike',
     'Ctrl-Alt-K': 'markdownInlineCode',
+    'Ctrl-Alt-C': 'markdownCode',
     'Ctrl-Alt-O': 'markdownOrderedList',
     'Ctrl-Alt-U': 'markdownUnorderedList',
     'Ctrl-Alt-I': 'markdownImage',
@@ -43,6 +45,8 @@ var codemirror = CodeMirror.fromTextArea(myTextarea, {
     "Enter": "newlineAndIndentContinueMarkdownList"
   },
   autoCloseBrackets: true,
+  autofocus: true,
+  styleActiveLine: true,
   viewportMargin: 40
 });
 
@@ -600,43 +604,68 @@ document.getElementById("accept-change-highlight-theme").onclick = function(){
 
 }
 
+//var mermaid = require("mermaid");
+var config_mermaid = {
+  startOnLoad:true,
+  flowchart:{
+    useMaxWidth:false,
+    htmlLabels:true
+  }
+};
+
+mermaid.initialize(config_mermaid);
+
+var markedRenderer = new marked.Renderer();
+
+markedRenderer.code = function(code, language){
+  if(code.match(/^sequenceDiagram/)||code.match(/^graph/)||code.match(/^gantt/)){
+    return '<div class="mermaid">'+code+'</div>';
+  }
+  else{
+    return '<pre><code>'+code+'</code></pre>';
+  }
+}
+
+marked.setOptions({
+  renderer: markedRenderer,
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: false,
+  smartLists: true,
+  smartypants: false,
+  highlight: function (code, lang) {
+    var res;
+    if(!lang){
+      return code;
+    }
+
+    switch(lang){
+      case 'js':
+        lang = 'javascript';
+      break;
+    }
+
+    try {
+      res = hljs.highlightAuto(code).value;
+    }
+    catch(e){
+
+    }
+    finally {
+      return res || code;
+    }
+  }
+});
+
+
 document.body.onkeyup = function(e) {
   myTextarea.value = codemirror.getValue();
 
-  marked.setOptions({
-    renderer: new marked.Renderer(),
-    gfm: true,
-    tables: true,
-    breaks: false,
-    pedantic: false,
-    sanitize: false,
-    smartLists: true,
-    smartypants: false,
-    highlight: function (code, lang) {
-      var res;
-      if(!lang){
-        return code;
-      }
-
-      switch(lang){
-        case 'js':
-          lang = 'javascript';
-        break;
-      }
-
-      try {
-        res = hljs.highlightAuto(code).value;
-      }
-      catch(e){
-
-      }
-      finally {
-        return res || code;
-      }
-    }
-  });
-
   document.getElementById('output').innerHTML = marked(myTextarea.value);
+
+  mermaid.init({noteMargin: 10}, ".mermaid");
 
   $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
 
