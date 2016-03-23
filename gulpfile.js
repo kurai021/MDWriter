@@ -6,6 +6,11 @@ var nw_builder = require('nw-builder');
 
 gulp.task('test', shell.task(['node_modules/.bin/nw .']));
 
+gulp.task('build-highlight', shell.task([
+	'cd app/assets/components/highlight.js/ && npm install',
+	'cd app/assets/components/highlight.js/ && node tools/build.js :common'
+]));
+
 gulp.task('browser', function(){
   gulp.src('./app/*.html')
   .pipe(open('file://<%= file.path %>', {app: 'firefox-aurora'}));

@@ -32,10 +32,9 @@ $ cd MDWriter/
 <pre><code>$ bower install
 </code></pre>
 
-3. Enter to Highlight.js Bower package (**/app/assets/components/highlight.js**) and install its dependencies with npm install.
-
-4. Build Highlight.js as seen in the [documentation](http://highlightjs.readthedocs.org/en/latest/building-testing.html)
-<pre><code>node tools/build.js :common</code></pre>
+3. Build Highlight.js
+<pre><code>$ gulp build-highlight
+</code></pre>
 
 ## Test
 
@@ -66,7 +65,6 @@ $ cd MDWriter/
 * Print support?.
 * Optimize the code
 * Create a task for minification.
-* Delete all bower dependencies and use only node packages?
 
 ## How to Contribute?
 
