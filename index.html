@@ -1,8 +1,325 @@
-<!doctype html><html class="no-js" lang=""><head><meta charset="utf-8"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><title>MDWriter site</title><link rel="apple-touch-icon" href="apple-touch-icon.png"><!-- Place favicon.ico in the root directory --><link rel="stylesheet" href="styles/main.css"><script src="scripts/vendor/modernizr.js"></script></head><body><!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--><div class="container"><div class="header"><ul class="nav nav-pills pull-right"><li class="active"><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul><h3 class="text-muted">MDWriter site</h3></div><div class="jumbotron"><h1>'Allo, 'Allo!</h1><p class="lead">Always a pleasure scaffolding your apps.</p><p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p></div><div class="row marketing"><div class="col-lg-6"><h4>HTML5 Boilerplate</h4><p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p><h4>Sass</h4><p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p><h4>Bootstrap</h4><p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p><h4>Modernizr</h4><p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p></div></div><div class="footer"><p>♥ from the Yeoman team</p></div></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src="scripts/vendor.js"></script><script src="scripts/plugins.js"></script><script src="scripts/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MDWriter - Markdown desktop editor with steroids powered by the web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/static/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/static/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/static/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/static/css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/static/css/theme-nearblack.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet"href="/static/css/custom.css" type="text/css" media="all" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,600,700" rel="stylesheet" type="text/css">
+  <link href="/static/css/font-roboto.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <div class="nav-container">
+
+  <nav class="absolute transparent">
+    <div class="nav-bar">
+      <div id="div_logo" class="module left">
+        <a href="#home">
+          <h3 class="logo logo-light">MDWriter</h3>
+          <h3 class="logo logo-dark">MDWriter</h3>
+        </a>
+      </div>
+      <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+        <i class="ti-menu"></i>
+      </div>
+      <div class="module-group right">
+        <div class="module left">
+          <ul class="menu">
+            <li>
+              <a target="_blank" class="inner-link" href="#home">home</a>
+            </li>
+            <li>
+              <a target="_blank" class="inner-link" href="#video">about</a>
+            </li>
+            <li>
+              <a target="_blank" class="inner-link" href="#features">Features</a>
+            </li>
+            <li>
+              <a target="_blank" class="inner-link" href="#download">download </a>
+            </li>
+
+
+          </ul>
+        </div>
+
+
+      </div>
+
+    </div>
+  </nav>
+
+</div>
+
+
+  <div class="main-container">
+    
+<a id="home" class="in-page-link"></a>
+
+<section class="bg-primary pb0">
+  <div class="container pt80">
+    <div class="row mb24 mb-xs-0">
+      <div class="col-sm-offset-1 text-center col-sm-10">
+        <h1 class="large">MDWriter</h1>
+        <p class="lead">Markdown desktop editor with steroids powered by the web</p>
+      </div>
+    </div>
+
+    <div class="row mb80 mb-xs-24">
+      <div class="col-sm-6 col-sm-offset-3">
+        <form id="mailchimp" class="form-newsletter halves" data-success="Thanks for your registration, we will be in touch shortly." data-error="Please fill all fields correctly." novalidate="true">
+          <input id="mc-email" name="email" class="transparent validate-email validate-required signup-email-field" placeholder="Email Address" type="email">
+          <button type="submit" class="btn-white">Start Free</button>
+          <div id="subscribe-result"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <img alt="image" src="/static/img/home.png" r>
+    </div>
+
+  </div>
+
+</section>
+
+<a id="subdiv" class="in-page-link"></a>
+
+<section class="pt120 pb120 pt-xs-40 pb-xs-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-md-offset-2">
+        <div class="feature feature-3 mb64 mb-xs-24">
+          <div class="left">
+            <i class="ti-notepad icon-sm"></i>
+          </div>
+          <div class="right">
+            <h4 class="mb16">Markdown support (GFM)</h4>
+            <p>
+              Github Flavored Markdown adds some additional functionality like strikethrough, code blocks
+              and tables.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="feature feature-3 mb64 mb-xs-24">
+          <div class="left">
+            <i class="ti-align-justify icon-sm"></i>
+          </div>
+          <div class="right">
+            <h4 class="mb16">Word counter</h4>
+            <p>
+              MDWriter count each word in your documents in real time.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-6 col-md-4 col-md-offset-2">
+        <div class="feature feature-3 mb-xs-24">
+          <div class="left">
+            <i class="ti-face-smile icon-sm"></i>
+          </div>
+          <div class="right">
+            <h4 class="mb16">Emoji support</h4>
+            <p>
+              Use shortcuts to insert emojis in your documents
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="feature feature-3">
+          <div class="left">
+            <i class="ti-layout icon-sm"></i>
+          </div>
+          <div class="right">
+            <h4 class="mb16">And a nice UI</h4>
+            <p>
+              MDWriter is based in Foundation a fully responsive framework for frontend developers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<a id="video" class="in-page-link"></a>
+
+<section class="bg-primary">
+  <div class="container">
+    <div class="row mb64 mb-xs-24">
+      <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+        <h3 class="mb40 mb-xs-24">Beautiful and web friendly documents</h3>
+        <p class="lead">
+          With MDWriter you know at any moment how will become your document.
+          Look how it render in real time in the side-by-side preview.
+        </p>
+      </div>
+    </div>
+
+    <div class="row mb48 mb-xs-24">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="local-video-container mb40">
+          <div class="background-image-holder">
+            <img alt="Background Image" class="background-image" src="/static/img/preview.png">
+          </div>
+          <video controls="">
+            <source src="/static/video/video.mp4" type="video/mp4">
+          </video>
+          <div class="play-button dark"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+</section>
+
+<a id="features" class="in-page-link"></a>
+
+<section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40">
+  <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8">
+    <img alt="Screenshot" class="cast-shadow mb-xs-24" src="/static/img/code.png" t>
+  </div>
+  <div class="container">
+    <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
+      <h1 class="large mb40 mb-xs-16">Code Highlighting</h1>
+      <h6 class="uppercase mb16">Create beautiful documentation for developers</h6>
+      <p class="lead mb40">
+        Over 20 programming language and 40 highlighting themes like Ambiance, Monokai, VS, Eclipse and more.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<a id="features2" class="in-page-link"></a>
+
+<section class="image-edge">
+  <div class="col-md-6 col-sm-4 p0">
+    <img alt="Screenshot" class="mb-xs-24" src="/static/img/gantt.png" t>
+  </div>
+  <div class="container">
+    <div class="col-md-5 col-md-offset-1 col-sm-7 col-sm-offset-1 v-align-transform right">
+      <h1 class="large mb40 mb-xs-16">Graphs, Flowcharts and Gantt Diagrams</h1>
+      <h6 class="uppercase mb16">Avoid heavy tools like Visio when explaining your code</h6>
+      <p class="lead mb40">
+        MDWriter uses Mermaid a Markdown-like script language for generating diagrams and flowcharts in SVG.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<a id="features" class="in-page-link"></a>
+
+<section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40">
+  <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8">
+    <img alt="Screenshot" class="cast-shadow mb-xs-24" src="/static/img/email.png" t>
+  </div>
+  <div class="container">
+    <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
+      <h1 class="large mb40 mb-xs-16">Email Support</h1>
+      <h6 class="uppercase mb16">Share your documents in HTML format</h6>
+      <p class="lead mb40">
+        Since simple messages to complex documentation, you can use MDWriter to create your emails in HTML.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<a id="download" class="in-page-link"></a>
+
+<section class="bg-dark pb0">
+  <div class="container">
+    <div class="row mb64 mb-xs-32">
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+        <h1 class="large">Excited?</h1>
+        <p class="lead mb48 mb-xs-32 fade-1-4">
+          MDWriter is available en GNU/Linux, OSX and Windows for x64
+        </p>
+        <a target="_blank" class="btn btn-lg btn-filled" href="https://github.com/kurai021/MDWriter/releases/latest"><i class="fa fa-download"></i> Download</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+        <img alt="App" src="/static/img/download.png" t>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <footer class="footer-2 bg-dark pt0 pb40">
+  <div class="container">
+    <div class="row">
+      <hr class="mt0 mb40"></hr>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <a class="fade-half" href="#home"><h3>MDWriter</h3></a>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <span class="fade-half">
+								MDWriter site by Richard Armuelles is distributed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+							</span>
+      </div>
+
+      <div class="col-sm-4 text-right text-center-xs">
+        <ul class="list-inline social-list">
+          <li><a href="https://twitter.com/raaztux" target="_blank"><i class="ti-twitter-alt"></i></a></li>
+          <li><a href="https://www.facebook.com/richard.armuelles" target="_blank"><i class="ti-facebook"></i></a></li>
+          <li><a href="https://github.com/kurai021/MDWriter" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.producthunt.com/tech/mdwriter" target="_blank"><i class="fa fa-product-hunt"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/flexslider.min.js"></script>
+  <script src="/static/js/lightbox.min.js"></script>
+  <script src="/static/js/masonry.min.js"></script>
+  <script src="/static/js/twitterfetcher.min.js"></script>
+  <script src="/static/js/spectragram.min.js"></script>
+  <script src="/static/js/ytplayer.min.js"></script>
+  <script src="/static/js/countdown.min.js"></script>
+  <script src="/static/js/smooth-scroll.min.js"></script>
+  <script src="/static/js/parallax.js"></script>
+  <script src="/static/js/ajaxchimp.min.js"></script>
+  <script src="/static/js/scripts.js"></script>
+</body>
+
+
+
+
+</html>
