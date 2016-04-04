@@ -66,8 +66,11 @@ document.getElementById('saveHTML').onclick = function(){
 }
 
 function saveFileAsHTML() {
-  var header = '<html lang="en"><head><meta charset="UTF-8"><title>'+ document.getElementById('filename').value +'</title></head><body>';
-  var footer = '</body></html>'
+  var highlightjs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js" charset="utf-8"></script>';
+  var foundationcss = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.css">';
+  var highlightcss = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/'+ highlight_theme +'.min.css">';
+  var header = '<html lang="en"><head><meta charset="UTF-8"><title>'+ document.getElementById('filename').value +'</title>'+ highlightcss + foundationcss +'</head><body>';
+  var footer = highlightjs + '</body></html>'
   var textToWrite = html_beautify(header + document.getElementById('output').innerHTML + footer);
   var textFileAsBlob = new Blob([textToWrite], {type:'text/html'});
   var fileNameToSaveAs = document.getElementById('filename').value + '.html';

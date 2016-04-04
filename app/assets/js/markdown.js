@@ -334,9 +334,11 @@ document.getElementById('accept-size-font').onclick = function(){
 
 }
 
+var highlight_theme = "monokai";
+
 //highlight theme changer
 document.getElementById("accept-change-highlight-theme").onclick = function(){
-  var highlight_theme = document.getElementById('chhighlightthemes').selectedOptions[0].text;
+  highlight_theme = document.getElementById('chhighlightthemes').selectedOptions[0].text;
 
   function swapStyleSheet(sheet) {
     document.getElementById("highlight_theme").setAttribute("href", sheet);
