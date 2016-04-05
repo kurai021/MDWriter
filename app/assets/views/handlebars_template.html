@@ -1,0 +1,32 @@
+<script id="templateHTML" type="text/x-handlebars-template">
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/{{highlightcss}}.min.css'>
+    <style>
+    body {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    hr {
+      max-width:100%;
+    }
+    a, a:link, a:hover, a:active, a:visited {
+      color: #4183c4;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      {{{content}}}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js" charset="utf-8"></script>
+    </div>
+  </body>
+  </html>
+  
+</script>

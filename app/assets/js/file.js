@@ -1,3 +1,5 @@
+var handlebars = require("handlebars");
+
 document.getElementById('loadFile').onclick = function(){
   return loadFileAsText();
 }
@@ -66,13 +68,15 @@ document.getElementById('saveHTML').onclick = function(){
 }
 
 function saveFileAsHTML() {
-  var highlightjs = '<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js" charset="utf-8"></script>';
-  var foundationcss = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.css">';
-  var stylecss = "<style>body {margin-top: 50px; margin-bottom: 50px;} hr {max-width:100%;} a, a:link, a:hover, a:active, a:visited {color: #4183c4;}</style>"
-  var highlightcss = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/'+ highlight_theme +'.min.css">';
-  var header = '<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /><title>'+ document.getElementById('filename').value +'</title>'+ highlightcss + foundationcss + stylecss +'</head><body><div class="row">';
-  var footer = highlightjs + '</div></body></html>'
-  var textToWrite = html_beautify(header + document.getElementById('output').innerHTML + footer);
+  var source = $("#templateHTML").html();
+  var template = handlebars.compile(source);
+  var context = {
+    title: document.getElementById('filename').value,
+    highlightcss: highlight_theme,
+    content: document.getElementById('output').innerHTML
+  };
+  var textToWrite = template(context);
+  console.log(textToWrite);
   var textFileAsBlob = new Blob([textToWrite], {type:'text/html'});
   var fileNameToSaveAs = document.getElementById('filename').value + '.html';
 
