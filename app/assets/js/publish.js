@@ -1,12 +1,12 @@
 var services = {
   tumblr: {
-    url: 'https://tumblr.com/share/text?',
-    title: 'title=',
+    url: 'http://tumblr.com/share/text?url=http://kurai021.github.io/MDWriter',
+    title: '&title=',
     body: '&body='
   },
   blogger: {
-    url: 'https://www.blogger.com/blog_this.pyra?',
-    title: 'n=',
+    url: 'https://www.blogger.com/blog-this.g?',
+    title: '&n=',
     body: '&t='
   }
 }
@@ -23,5 +23,5 @@ document.getElementById("tumblr").onclick = function(){
 document.getElementById("blogger").onclick = function(){
   var bloggerEmbed = document.getElementById("blogger-embed");
 
-  bloggerEmbed.setAttribute("href", services.blogger.url + services.blogger.title + name + services.blogger.body + content.innerHTML);
+  bloggerEmbed.setAttribute("href", services.blogger.url + services.blogger.body + content.innerHTML + services.blogger.title + name);
 }
