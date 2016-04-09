@@ -24,9 +24,11 @@
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",
     "CodeMirror": "~5.3.0",
-    "jspdf": "https://github.com/MrRio/jsPDF.git"
+    "jspdf": "https://github.com/MrRio/jsPDF.git",
+    "html-docx-js": "^0.3.0"
   },
   "devDependencies": {
-    "mermaid": "^0.5.8"
+    "mermaid": "^0.5.8",
+    "FileSaver.js": "^0.0.2"
   }
 }

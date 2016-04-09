@@ -606,7 +606,6 @@ document.getElementById("accept-change-highlight-theme").onclick = function(){
 
 }
 
-//var mermaid = require("mermaid");
 var config_mermaid = {
   startOnLoad:true,
   flowchart:{

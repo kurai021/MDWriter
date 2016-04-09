@@ -76,32 +76,31 @@ function saveFileAsHTML() {
     content: document.getElementById('output').innerHTML
   };
   var textToWrite = template(context);
-  console.log(textToWrite);
   var textFileAsBlob = new Blob([textToWrite], {type:'text/html'});
   var fileNameToSaveAs = document.getElementById('filename').value + '.html';
 
-  var downloadLink = document.createElement("a");
-  downloadLink.download = fileNameToSaveAs;
-  downloadLink.innerHTML = "Download File";
+  var downloadHTML = document.createElement("a");
+  downloadHTML.download = fileNameToSaveAs;
+  downloadHTML.innerHTML = "Download File";
 
   if (window.webkitURL != null) {
 
     // Chrome allows the link to be clicked
     // without actually adding it to the DOM.
-    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    downloadHTML.href = window.webkitURL.createObjectURL(textFileAsBlob);
   }
 
   else {
 
     // Firefox requires the link to be added to the DOM
     // before it can be clicked.
-    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-    downloadLink.onclick = destroyClickedElement;
-    downloadLink.style.display = "none";
-    document.body.appendChild(downloadLink);
+    downloadHTML.href = window.URL.createObjectURL(textFileAsBlob);
+    downloadHTML.onclick = destroyClickedElement;
+    downloadHTML.style.display = "none";
+    document.body.appendChild(downloadHTML);
   }
 
-  downloadLink.click();
+  downloadHTML.click();
 
 }
 
