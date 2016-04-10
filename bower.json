@@ -28,7 +28,6 @@
     "html-docx-js": "^0.3.0"
   },
   "devDependencies": {
-    "mermaid": "^0.5.8",
-    "FileSaver.js": "^0.0.2"
+    "mermaid": "^0.5.8"
   }
 }
