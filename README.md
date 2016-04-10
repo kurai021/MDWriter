@@ -1,11 +1,12 @@
 # MDWriter
+---
 A markdown desktop editor with steroids powered by the web.
 
 ![Imgur](http://i.imgur.com/s5iuoi6.gif)
 
 ## Features
 * Save to Markdown (GFM)
-* Export to HTML and PDF
+* Export to HTML, PDF and DOCX
 * Syntax Highlighting
 * Editor and highlighting themes and font size changer
 * Outlook, Gmail and Yahoo support
@@ -53,11 +54,11 @@ $ cd MDWriter/
 
 ## ToDo
 
-* Actually jsPDF is unstable, is necessary to find a module that does the same function or create a module from scratch for HTML5 to PDF.
+* Actually jsPDF is unstable with SVG, is necessary to find a module that does the same function or create a module from scratch for HTML5 to PDF.
 * ~~Some bugs in the word counter must be solved.~~
 * ~~In file name is necessary to clean the name -> /foo/bar.md to bar.~~
 * ~~Change font size in live.~~
-* Support for Blogger, Tumblr and Wordpress (maybe Ghost).
+* ~~Support for Blogger, Tumblr~~ and Wordpress (maybe Ghost).
 * ~~Emoji support~~ (partial)
 * ~~Flowchart/Graphs and Gantt support~~
 * ~~Separate load/save as .md file from markdown.js~~
