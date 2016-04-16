@@ -323,6 +323,7 @@ ul.off-canvas-list li a:hover {
 
 #div-help-markdown .fa-question-circle {
   color: #636E73;
+  font-size: 20px;
 }
 
 #editor {
@@ -387,13 +388,13 @@ a:visited {
 }
 
 #btn-min:hover {
-  color: #f1c40f;
+  color: #FDB92C;
 }
 
 #btn-max:hover {
-  color: #27ae60;
+  color: #00D25D;
 }
 
 #btn-close:hover {
-  color: #E74C3C;
+  color: #FE514B;
 }
