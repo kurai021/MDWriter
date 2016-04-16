@@ -1,10 +1,90 @@
 body {
   margin: 0;
   padding-top: 50px;
+  background: #fafafa;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
   overflow-y: hidden;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea {
+    border-bottom: 1px solid #e0e0e0 !important;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+[type="text"],
+[type="password"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="email"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="url"],
+[type="color"],
+textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.4375rem;
+    padding: 0.5rem;
+    border: 0 !important;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.26) !important;
+    box-shadow: none;
+    border-radius: 2px;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  border-bottom: 2px solid #636E73 !important;
+  position: relative;
+  top: 1px;
+  background: transparent;
+}
+
+span.postfix,
+label.postfix {
+  border-left: solid 1px #cccccc;
 }
 
 blockquote {
@@ -26,26 +106,56 @@ select {
   -webkit-user-select: none;
 }
 
-.tab-bar, .left-off-canvas-menu {
-  background-color: #16171A;
+.tab-bar {
+  background-color: #636E73;
+  box-shadow: 0px 1px 5px #888888;
+}
+
+.left-off-canvas-menu {
+  background-color: #828B8F;
+}
+
+.left-small {
+  border-right: solid 1px #636E73;
+}
+
+ul.off-canvas-list li a {
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
 }
 
 ul.off-canvas-list li label {
-  background-image: linear-gradient(to bottom, #282828 0%, #1e1e1e 100%);
-  border-bottom: 2px solid #000000;
+  border-top: none;
+  background-color: #636E73;
+  color: #fff;
   text-transform: none;
 }
 
-@keyframes aniborder {
-  0% {border-bottom: none;}
-  50% {border-bottom: 2px solid #7098D4;}
-  100% {border-bottom: 5px solid #2B6ED2;}
+ul.off-canvas-list li .fa {
+  margin-right: 16px;
+  font-size: 20px;
+}
+
+@keyframes aniborder{
+  0% {border-left: 1px solid #ffffff;}
+  50% {border-left: 2.5px solid #ffffff;}
+  100% {border-left: 5px solid #ffffff;}
+}
+
+@-webkit-keyframes aniborder{
+  0% {border-left: 1px solid #ffffff;}
+  50% {border-left: 2.5px solid #ffffff;}
+  100% {border-left: 5px solid #ffffff;}
 }
 
 ul.off-canvas-list li a:hover {
-  background: #16171A;
   animation: aniborder 0.2s forwards;
+  -webkit-animation: aniborder 0.2s forwards;
+  background-color: #828B8F;
+}
 
+.move-right .exit-off-canvas {
+  box-shadow: none;
 }
 
 .text-collapse {
@@ -170,6 +280,29 @@ ul.off-canvas-list li a:hover {
   text-align: left;
 }
 
+.reveal-modal button {
+  text-transform: uppercase;
+  font-family: Roboto, Noto, sans-serif;
+  border-radius: 2px !important;
+  font-size: 0.9rem;
+  font-weight: 500 !important;
+  background-color: #00bcd4;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.13), 0 1px 5px 0 rgba(0, 0, 0, 0.08);
+  padding: 0.85em 1em 0.7em 1em;
+}
+
+.reveal-modal a.button {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Roboto, Noto, sans-serif;
+  border-radius: 2px !important;
+  font-size: 0.9rem;
+  font-weight: 500 !important;
+  background-color: #00bcd4;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.13), 0 1px 5px 0 rgba(0, 0, 0, 0.08);
+  padding: 0.85em 1em 0.7em 1em;
+}
+
 #tumblr-alert .button, #blogger-alert .button {
   color: white;
 }
@@ -186,6 +319,10 @@ ul.off-canvas-list li a:hover {
 
 #div-help-markdown {
   text-align: right;
+}
+
+#div-help-markdown .fa-question-circle {
+  color: #636E73;
 }
 
 #editor {
