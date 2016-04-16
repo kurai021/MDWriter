@@ -112,7 +112,7 @@ select {
 }
 
 .left-off-canvas-menu {
-  background-color: #828B8F;
+  background-color: #636E73;
 }
 
 .left-small {
@@ -126,6 +126,7 @@ ul.off-canvas-list li a {
 
 ul.off-canvas-list li label {
   border-top: none;
+  border-bottom: 1px solid #828B8F;
   background-color: #636E73;
   color: #fff;
   text-transform: none;
