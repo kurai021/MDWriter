@@ -47,6 +47,8 @@ document.getElementById("send-email").onclick = function(){
   }
 
   else {
+    //$("#email-alert input").css('border-bottom', '1px solid #F44336');
+    $("#email-alert input").css('box-shadow', '0 2px 0 0 #F44336');
     var errormsg = '<small class="error">Email not supported<small>';
 
     $('#from').addClass("error");
@@ -58,7 +60,8 @@ document.getElementById("send-email").onclick = function(){
   // send mail with defined transport object
   transporter.sendMail(options, function(error, info){
     if(error){
-
+      //$("#email-alert input").css('border-bottom', '1px solid #F44336');
+      $("#email-alert input").css('box-shadow', '0 2px 0 0 #F44336');
       var errormsg = '<small class="error">Wrong entry<small>';
 
       $('#to').addClass("error");
@@ -101,6 +104,8 @@ function removeError(){
     $('#to').removeClass("error");
     $('#from').removeClass("error");
     $('#password').removeClass("error");
+
+    $("#email-alert input").css('box-shadow', 'none');
 
   }
 }
