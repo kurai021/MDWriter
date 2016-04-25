@@ -9,6 +9,11 @@
   font-size: 26px;
 }
 
+.emoji-img {
+  width: 26px;
+  height: auto;
+}
+
 #alert-markdown-help .emoji-list li{
   font-family: EmojiOne;
   font-size: 20px;

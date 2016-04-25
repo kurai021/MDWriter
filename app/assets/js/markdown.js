@@ -4,7 +4,7 @@ var codemirror = CodeMirror.fromTextArea(myTextarea, {
   lineNumbers: true,
   lineWrapping: true,
   mode: "markdown",
-  theme: "mdn-like",
+  theme: "material",
   extraKeys: {
     'Cmd-B': 'markdownBold',
     'Cmd-I': 'markdownItalic',
@@ -69,6 +69,10 @@ document.getElementById('accept-change-theme').onclick = function(){
     codemirror.setOption("theme", "3024-night");
     codemirror.refresh();
   }
+  else if(theme == 'abcdef'){
+    codemirror.setOption("theme", "abcdef");
+    codemirror.refresh();
+  }
   else if(theme == 'ambiance'){
     codemirror.setOption("theme", "ambiance");
     codemirror.refresh();
@@ -79,6 +83,10 @@ document.getElementById('accept-change-theme').onclick = function(){
   }
   else if(theme == 'base16-light'){
     codemirror.setOption("theme", "base16-light");
+    codemirror.refresh();
+  }
+  else if(theme == 'bespin'){
+    codemirror.setOption("theme", "bespin");
     codemirror.refresh();
   }
   else if(theme == 'blackboard'){
@@ -93,6 +101,10 @@ document.getElementById('accept-change-theme').onclick = function(){
     codemirror.setOption("theme", "colorforth");
     codemirror.refresh();
   }
+  else if(theme == 'dracula'){
+    codemirror.setOption("theme", "dracula");
+    codemirror.refresh();
+  }
   else if(theme == 'eclipse'){
     codemirror.setOption("theme", "ecplise");
     codemirror.refresh();
@@ -105,6 +117,18 @@ document.getElementById('accept-change-theme').onclick = function(){
     codemirror.setOption("theme", "erlang-dark");
     codemirror.refresh();
   }
+  else if(theme == 'hopscotch'){
+    codemirror.setOption("theme", "hopscotch");
+    codemirror.refresh();
+  }
+  else if(theme == 'icecoder'){
+    codemirror.setOption("theme", "icecoder");
+    codemirror.refresh();
+  }
+  else if(theme == 'isotope'){
+    codemirror.setOption("theme", "isotope");
+    codemirror.refresh();
+  }
   else if(theme == 'lesser-dark'){
     codemirror.setOption("theme", "lesser-dark");
     codemirror.refresh();
@@ -115,6 +139,10 @@ document.getElementById('accept-change-theme').onclick = function(){
   }
   else if(theme == 'mbo'){
     codemirror.setOption("theme", "mbo");
+    codemirror.refresh();
+  }
+  else if(theme == 'mdn-like'){
+    codemirror.setOption("theme", "mdn-like");
     codemirror.refresh();
   }
   else if(theme == 'midnight'){
@@ -149,8 +177,16 @@ document.getElementById('accept-change-theme').onclick = function(){
     codemirror.setOption("theme", "pastel-on-dark");
     codemirror.refresh();
   }
+  else if(theme == 'railscasts'){
+    codemirror.setOption("theme", "railscasts");
+    codemirror.refresh();
+  }
   else if(theme == 'rubyblue'){
     codemirror.setOption("theme", "rubyblue");
+    codemirror.refresh();
+  }
+  else if(theme == 'seti'){
+    codemirror.setOption("theme", "seti");
     codemirror.refresh();
   }
   else if(theme == 'solarized'){
@@ -189,12 +225,16 @@ document.getElementById('accept-change-theme').onclick = function(){
     codemirror.setOption("theme", "xq-light");
     codemirror.refresh();
   }
+  else if(theme == 'yeti'){
+    codemirror.setOption("theme", "yeti");
+    codemirror.refresh();
+  }
   else if(theme == 'zenburn'){
     codemirror.setOption("theme", "zenburn");
     codemirror.refresh();
   }
   else{
-    codemirror.setOption("theme", "mdn-like");
+    codemirror.setOption("theme", "material");
     codemirror.refresh();
   }
 }
@@ -672,277 +712,555 @@ document.body.onkeyup = function(e) {
 
   /*--emoji support--*/
 
-  var emoji_array = {
-    grinning: {
-      keyword: ':grinning:',
-      replace: '😀'
-    },
-    grin: {
-      keyword: ':grin:',
-      replace: '😁'
-    },
-    joy: {
-      keyword: ':joy:',
-      replace: '😂'
-    },
-    smiley: {
-      keyword: ':smiley:',
-      replace: '😃'
-    },
-    smile: {
-      keyword: ':smile:',
-      replace: '😄'
-    },
-    sweat_smile: {
-      keyword: ':sweat_smile:',
-      replace: '😅'
-    },
-    satisfied: {
-      keyword: ':satisfied:',
-      replace: '😆'
-    },
-    innocent: {
-      keyword: ':innocent:',
-      replace: '😇'
-    },
-    smiling_imp: {
-      keyword: ':smiling_imp:',
-      replace: '😈'
-    },
-    wink: {
-      keyword: ':wink:',
-      replace: '😉'
-    },
-    blush: {
-      keyword: ':blush:',
-      replace: '😊'
-    },
-    yum: {
-      keyword: ':yum:',
-      replace: '😋'
-    },
-    relieved: {
-      keyword: ':relieved:',
-      replace: '😌'
-    },
-    heart_eyes: {
-      keyword: ':heart_eyes:',
-      replace: '😍'
-    },
-    sunglasses: {
-      keyword: ':sunglasses:',
-      replace: '😎'
-    },
-    smirk: {
-      keyword: ':smirk:',
-      replace: '😏'
-    },
-    neutral_face: {
-      keyword: ':neutral_face:',
-      replace: '😐'
-    },
-    expressionless: {
-      keyword: ':expressionless:',
-      replace: '😑'
-    },
-    unamused: {
-      keyword: ':unamused:',
-      replace: '😒'
-    },
-    sweat: {
-      keyword: ':sweat:',
-      replace: '😓'
-    },
-    pensive: {
-      keyword: ':pensive:',
-      replace: '😔'
-    },
-    confused: {
-      keyword: ':confused:',
-      replace: '😕'
-    },
-    confounded: {
-      keyword: ':confounded:',
-      replace: '😖'
-    },
-    kissing: {
-      keyword: ':kissing:',
-      replace: '😗'
-    },
-    kissing_heart: {
-      keyword: ':kissing_heart:',
-      replace: '😘'
-    },
-    kissing_smiling_eyes: {
-      keyword: ':kissing_smiling_eyes:',
-      replace: '😙'
-    },
-    kissing_closed_eyes: {
-      keyword: ':kissing_closed_eyes:',
-      replace: '😚'
-    },
-    stuck_out_tongue: {
-      keyword: ':stuck_out_tongue:',
-      replace: '😛'
-    },
-    stuck_out_tongue_winking_eye: {
-      keyword: ':stuck_out_tongue_winking_eye:',
-      replace: '😜'
-    },
-    stuck_out_tongue_closed_eyes: {
-      keyword: ':stuck_out_tongue_closed_eyes:',
-      replace: '😝'
-    },
-    disappointed: {
-      keyword: ':disappointed:',
-      replace: '😞'
-    },
-    worried: {
-      keyword: ':worried:',
-      replace: '😟'
-    },
-    angry: {
-      keyword: ':angry:',
-      replace: '😠'
-    },
-    rage: {
-      keyword: ':rage:',
-      replace: '😡'
-    },
-    cry: {
-      keyword: ':cry:',
-      replace: '😢'
-    },
-    persevere: {
-      keyword: ':persevere:',
-      replace: '😣'
-    },
-    triumph: {
-      keyword: ':triumph:',
-      replace: '😤'
-    },
-    disappointed_relieved: {
-      keyword: ':disappointed_relieved:',
-      replace: '😥'
-    },
-    frowning: {
-      keyword: ':frowning:',
-      replace: '😦'
-    },
-    anguished: {
-      keyword: ':anguished:',
-      replace: '😧'
-    },
-    fearful: {
-      keyword: ':fearful:',
-      replace: '😨'
-    },
-    weary: {
-      keyword: ':weary:',
-      replace: '😩'
-    },
-    sleepy: {
-      keyword: ':sleepy:',
-      replace: '😪'
-    },
-    tired_face: {
-      keyword: ':tired_face:',
-      replace: '😫'
-    },
-    grimacing: {
-      keyword: ':grimacing:',
-      replace: '😬'
-    },
-    sob: {
-      keyword: ':sob:',
-      replace: '😭'
-    },
-    open_mouth: {
-      keyword: ':open_mouth:',
-      replace: '😮'
-    },
-    hushed: {
-      keyword: ':hushed:',
-      replace: '😯'
-    },
-    cold_sweat: {
-      keyword: ':cold_sweat:',
-      replace: '😰'
-    },
-    scream: {
-      keyword: ':scream:',
-      replace: '😱'
-    },
-    astonished: {
-      keyword: ':astonished:',
-      replace: '😲'
-    },
-    flushed: {
-      keyword: ':flushed:',
-      replace: '😳'
-    },
-    sleeping: {
-      keyword: ':sleeping:',
-      replace: '😴'
-    },
-    dizzy_face: {
-      keyword: ':dizzy_face:',
-      replace: '😵'
-    },
-    no_mouth: {
-      keyword: ':no_mouth:',
-      replace: '😶'
-    },
-    mask: {
-      keyword: ':mask:',
-      replace: '😷'
-    },
-    smile_cat: {
-      keyword: ':smile_cat:',
-      replace: '😸'
-    },
-    joy_cat: {
-      keyword: ':joy_cat:',
-      replace: '😹'
-    },
-    smiley_cat: {
-      keyword: ':smiley_cat:',
-      replace: '😺'
-    },
-    heart_cat: {
-      keyword: ':heart cat:',
-      replace: '😻'
-    },
-    smile_cat: {
-      keyword: ':smile cat:',
-      replace: '😼'
-    },
-    heart_eyes_cat: {
-      keyword: ':heart_eyes_cat:',
-      replace: '😽'
-    },
-    pouting_cat: {
-      keyword: ':pouting_cat:',
-      replace: '😾'
-    },
-    crying_cat_face: {
-      keyword: ':crying_cat_face:',
-      replace: '😿'
-    },
-    scream_cat: {
-      keyword: ':scream_cat:',
-      replace: '🙀'
-    }
-  }
-
   var output;
   output = document.getElementById("output");
 
-  Object.getOwnPropertyNames(emoji_array).forEach(function(key){
-    var emoji;
-    emoji = emoji_array[key];
-    output.innerHTML = output.innerHTML.replace(emoji.keyword,'<span class="emoji ' + key +'">'+ emoji.replace +'</span>');
-  });
+  if(navigator.userAgent.search("Firefox") >= 0){
+
+    var emoji_array = {
+      grinning: {
+        keyword: ':grinning:',
+        replace: '😀'
+      },
+      grin: {
+        keyword: ':grin:',
+        replace: '😁'
+      },
+      joy: {
+        keyword: ':joy:',
+        replace: '😂'
+      },
+      smiley: {
+        keyword: ':smiley:',
+        replace: '😃'
+      },
+      smile: {
+        keyword: ':smile:',
+        replace: '😄'
+      },
+      sweat_smile: {
+        keyword: ':sweat_smile:',
+        replace: '😅'
+      },
+      satisfied: {
+        keyword: ':satisfied:',
+        replace: '😆'
+      },
+      innocent: {
+        keyword: ':innocent:',
+        replace: '😇'
+      },
+      smiling_imp: {
+        keyword: ':smiling_imp:',
+        replace: '😈'
+      },
+      wink: {
+        keyword: ':wink:',
+        replace: '😉'
+      },
+      blush: {
+        keyword: ':blush:',
+        replace: '😊'
+      },
+      yum: {
+        keyword: ':yum:',
+        replace: '😋'
+      },
+      relieved: {
+        keyword: ':relieved:',
+        replace: '😌'
+      },
+      heart_eyes: {
+        keyword: ':heart_eyes:',
+        replace: '😍'
+      },
+      sunglasses: {
+        keyword: ':sunglasses:',
+        replace: '😎'
+      },
+      smirk: {
+        keyword: ':smirk:',
+        replace: '😏'
+      },
+      neutral_face: {
+        keyword: ':neutral_face:',
+        replace: '😐'
+      },
+      expressionless: {
+        keyword: ':expressionless:',
+        replace: '😑'
+      },
+      unamused: {
+        keyword: ':unamused:',
+        replace: '😒'
+      },
+      sweat: {
+        keyword: ':sweat:',
+        replace: '😓'
+      },
+      pensive: {
+        keyword: ':pensive:',
+        replace: '😔'
+      },
+      confused: {
+        keyword: ':confused:',
+        replace: '😕'
+      },
+      confounded: {
+        keyword: ':confounded:',
+        replace: '😖'
+      },
+      kissing: {
+        keyword: ':kissing:',
+        replace: '😗'
+      },
+      kissing_heart: {
+        keyword: ':kissing_heart:',
+        replace: '😘'
+      },
+      kissing_smiling_eyes: {
+        keyword: ':kissing_smiling_eyes:',
+        replace: '😙'
+      },
+      kissing_closed_eyes: {
+        keyword: ':kissing_closed_eyes:',
+        replace: '😚'
+      },
+      stuck_out_tongue: {
+        keyword: ':stuck_out_tongue:',
+        replace: '😛'
+      },
+      stuck_out_tongue_winking_eye: {
+        keyword: ':stuck_out_tongue_winking_eye:',
+        replace: '😜'
+      },
+      stuck_out_tongue_closed_eyes: {
+        keyword: ':stuck_out_tongue_closed_eyes:',
+        replace: '😝'
+      },
+      disappointed: {
+        keyword: ':disappointed:',
+        replace: '😞'
+      },
+      worried: {
+        keyword: ':worried:',
+        replace: '😟'
+      },
+      angry: {
+        keyword: ':angry:',
+        replace: '😠'
+      },
+      rage: {
+        keyword: ':rage:',
+        replace: '😡'
+      },
+      cry: {
+        keyword: ':cry:',
+        replace: '😢'
+      },
+      persevere: {
+        keyword: ':persevere:',
+        replace: '😣'
+      },
+      triumph: {
+        keyword: ':triumph:',
+        replace: '😤'
+      },
+      disappointed_relieved: {
+        keyword: ':disappointed_relieved:',
+        replace: '😥'
+      },
+      frowning: {
+        keyword: ':frowning:',
+        replace: '😦'
+      },
+      anguished: {
+        keyword: ':anguished:',
+        replace: '😧'
+      },
+      fearful: {
+        keyword: ':fearful:',
+        replace: '😨'
+      },
+      weary: {
+        keyword: ':weary:',
+        replace: '😩'
+      },
+      sleepy: {
+        keyword: ':sleepy:',
+        replace: '😪'
+      },
+      tired_face: {
+        keyword: ':tired_face:',
+        replace: '😫'
+      },
+      grimacing: {
+        keyword: ':grimacing:',
+        replace: '😬'
+      },
+      sob: {
+        keyword: ':sob:',
+        replace: '😭'
+      },
+      open_mouth: {
+        keyword: ':open_mouth:',
+        replace: '😮'
+      },
+      hushed: {
+        keyword: ':hushed:',
+        replace: '😯'
+      },
+      cold_sweat: {
+        keyword: ':cold_sweat:',
+        replace: '😰'
+      },
+      scream: {
+        keyword: ':scream:',
+        replace: '😱'
+      },
+      astonished: {
+        keyword: ':astonished:',
+        replace: '😲'
+      },
+      flushed: {
+        keyword: ':flushed:',
+        replace: '😳'
+      },
+      sleeping: {
+        keyword: ':sleeping:',
+        replace: '😴'
+      },
+      dizzy_face: {
+        keyword: ':dizzy_face:',
+        replace: '😵'
+      },
+      no_mouth: {
+        keyword: ':no_mouth:',
+        replace: '😶'
+      },
+      mask: {
+        keyword: ':mask:',
+        replace: '😷'
+      },
+      smile_cat: {
+        keyword: ':smile_cat:',
+        replace: '😸'
+      },
+      joy_cat: {
+        keyword: ':joy_cat:',
+        replace: '😹'
+      },
+      smiley_cat: {
+        keyword: ':smiley_cat:',
+        replace: '😺'
+      },
+      heart_cat: {
+        keyword: ':heart cat:',
+        replace: '😻'
+      },
+      smile_cat: {
+        keyword: ':smile cat:',
+        replace: '😼'
+      },
+      heart_eyes_cat: {
+        keyword: ':heart_eyes_cat:',
+        replace: '😽'
+      },
+      pouting_cat: {
+        keyword: ':pouting_cat:',
+        replace: '😾'
+      },
+      crying_cat_face: {
+        keyword: ':crying_cat_face:',
+        replace: '😿'
+      },
+      scream_cat: {
+        keyword: ':scream_cat:',
+        replace: '🙀'
+      }
+    }
+
+    Object.getOwnPropertyNames(emoji_array).forEach(function(key){
+      var emoji;
+      emoji = emoji_array[key];
+      output.innerHTML = output.innerHTML.replace(emoji.keyword,'<span class="emoji ' + key +'">'+ emoji.replace +'</span>');
+    });
+
+  }
+
+  else {
+
+    var emoji_array = {
+      grinning: {
+        keyword: ':grinning:',
+        replace: '1f600'
+      },
+      grin: {
+        keyword: ':grin:',
+        replace: '1f601'
+      },
+      joy: {
+        keyword: ':joy:',
+        replace: '1f602'
+      },
+      smiley: {
+        keyword: ':smiley:',
+        replace: '1f603'
+      },
+      smile: {
+        keyword: ':smile:',
+        replace: '1f604'
+      },
+      sweat_smile: {
+        keyword: ':sweat_smile:',
+        replace: '1f605'
+      },
+      satisfied: {
+        keyword: ':satisfied:',
+        replace: '1f606'
+      },
+      innocent: {
+        keyword: ':innocent:',
+        replace: '1f607'
+      },
+      smiling_imp: {
+        keyword: ':smiling_imp:',
+        replace: '1f608'
+      },
+      wink: {
+        keyword: ':wink:',
+        replace: '1f609'
+      },
+      blush: {
+        keyword: ':blush:',
+        replace: '1f60a'
+      },
+      yum: {
+        keyword: ':yum:',
+        replace: '1f60b'
+      },
+      relieved: {
+        keyword: ':relieved:',
+        replace: '1f60c'
+      },
+      heart_eyes: {
+        keyword: ':heart_eyes:',
+        replace: '1f60d'
+      },
+      sunglasses: {
+        keyword: ':sunglasses:',
+        replace: '1f60e'
+      },
+      smirk: {
+        keyword: ':smirk:',
+        replace: '1f60f'
+      },
+      neutral_face: {
+        keyword: ':neutral_face:',
+        replace: '1f610'
+      },
+      expressionless: {
+        keyword: ':expressionless:',
+        replace: '1f611'
+      },
+      unamused: {
+        keyword: ':unamused:',
+        replace: '1f612'
+      },
+      sweat: {
+        keyword: ':sweat:',
+        replace: '1f613'
+      },
+      pensive: {
+        keyword: ':pensive:',
+        replace: '1f614'
+      },
+      confused: {
+        keyword: ':confused:',
+        replace: '1f615'
+      },
+      confounded: {
+        keyword: ':confounded:',
+        replace: '1f616'
+      },
+      kissing: {
+        keyword: ':kissing:',
+        replace: '1f617'
+      },
+      kissing_heart: {
+        keyword: ':kissing_heart:',
+        replace: '1f618'
+      },
+      kissing_smiling_eyes: {
+        keyword: ':kissing_smiling_eyes:',
+        replace: '1f619'
+      },
+      kissing_closed_eyes: {
+        keyword: ':kissing_closed_eyes:',
+        replace: '1f619'
+      },
+      stuck_out_tongue: {
+        keyword: ':stuck_out_tongue:',
+        replace: '1f61a'
+      },
+      stuck_out_tongue_winking_eye: {
+        keyword: ':stuck_out_tongue_winking_eye:',
+        replace: '1f61b'
+      },
+      stuck_out_tongue_closed_eyes: {
+        keyword: ':stuck_out_tongue_closed_eyes:',
+        replace: '1f61c'
+      },
+      disappointed: {
+        keyword: ':disappointed:',
+        replace: '1f61d'
+      },
+      worried: {
+        keyword: ':worried:',
+        replace: '1f61e'
+      },
+      angry: {
+        keyword: ':angry:',
+        replace: '1f61f'
+      },
+      rage: {
+        keyword: ':rage:',
+        replace: '1f620'
+      },
+      cry: {
+        keyword: ':cry:',
+        replace: '1f621'
+      },
+      persevere: {
+        keyword: ':persevere:',
+        replace: '1f622'
+      },
+      triumph: {
+        keyword: ':triumph:',
+        replace: '1f623'
+      },
+      disappointed_relieved: {
+        keyword: ':disappointed_relieved:',
+        replace: '1f624'
+      },
+      frowning: {
+        keyword: ':frowning:',
+        replace: '1f625'
+      },
+      anguished: {
+        keyword: ':anguished:',
+        replace: '1f626'
+      },
+      fearful: {
+        keyword: ':fearful:',
+        replace: '1f627'
+      },
+      weary: {
+        keyword: ':weary:',
+        replace: '1f628'
+      },
+      sleepy: {
+        keyword: ':sleepy:',
+        replace: '1f629'
+      },
+      tired_face: {
+        keyword: ':tired_face:',
+        replace: '1f62b'
+      },
+      grimacing: {
+        keyword: ':grimacing:',
+        replace: '1f62c'
+      },
+      sob: {
+        keyword: ':sob:',
+        replace: '1f62d'
+      },
+      open_mouth: {
+        keyword: ':open_mouth:',
+        replace: '1f62e'
+      },
+      hushed: {
+        keyword: ':hushed:',
+        replace: '1f62f'
+      },
+      cold_sweat: {
+        keyword: ':cold_sweat:',
+        replace: '1f630'
+      },
+      scream: {
+        keyword: ':scream:',
+        replace: '1f631'
+      },
+      astonished: {
+        keyword: ':astonished:',
+        replace: '1f632'
+      },
+      flushed: {
+        keyword: ':flushed:',
+        replace: '1f633'
+      },
+      sleeping: {
+        keyword: ':sleeping:',
+        replace: '1f634'
+      },
+      dizzy_face: {
+        keyword: ':dizzy_face:',
+        replace: '1f635'
+      },
+      no_mouth: {
+        keyword: ':no_mouth:',
+        replace: '1f636'
+      },
+      mask: {
+        keyword: ':mask:',
+        replace: '1f637'
+      },
+      smile_cat: {
+        keyword: ':smile_cat:',
+        replace: '1f638'
+      },
+      joy_cat: {
+        keyword: ':joy_cat:',
+        replace: '1f639'
+      },
+      smiley_cat: {
+        keyword: ':smiley_cat:',
+        replace: '1f63a'
+      },
+      heart_cat: {
+        keyword: ':heart cat:',
+        replace: '1f63b'
+      },
+      smile_cat: {
+        keyword: ':smile cat:',
+        replace: '1f63c'
+      },
+      heart_eyes_cat: {
+        keyword: ':heart_eyes_cat:',
+        replace: '1f63d'
+      },
+      pouting_cat: {
+        keyword: ':pouting_cat:',
+        replace: '1f63e'
+      },
+      crying_cat_face: {
+        keyword: ':crying_cat_face:',
+        replace: '1f63f'
+      },
+      scream_cat: {
+        keyword: ':scream_cat:',
+        replace: '1f640'
+      }
+    }
+
+    Object.getOwnPropertyNames(emoji_array).forEach(function(key){
+      var emoji;
+      emoji = emoji_array[key];
+      output.innerHTML = output.innerHTML.replace(emoji.keyword,'<img class="emoji-img '+ key +'" src="assets/images/emojis/'+ emoji.replace +'.svg">');
+    });
+
+  }
+
 
   var checkboxes_array = {
     checkbox_uncheck: {
