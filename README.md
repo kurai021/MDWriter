@@ -54,7 +54,7 @@ $ cd MDWriter/
 
 ## ToDo
 
-* Actually jsPDF is unstable with SVG, is necessary to find a module that does the same function or create a module from scratch for HTML5 to PDF.
+* ~~Actually jsPDF is unstable with SVG, is necessary to find a module that does the same function or create a module from scratch for HTML5 to PDF.~~
 * ~~Some bugs in the word counter must be solved.~~
 * ~~In file name is necessary to clean the name -> /foo/bar.md to bar.~~
 * ~~Change font size in live.~~

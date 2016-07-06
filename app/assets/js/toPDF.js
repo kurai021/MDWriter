@@ -18,10 +18,10 @@ document.getElementById('savePDF').onclick = function(){
 		output = "%UserProfile%/Downloads"+document.getElementById("filename").value+".pdf";
 	}
 	if(navigator.appVersion.indexOf("Mac")!=-1){
-		output = "~/Downloads/"+document.getElementById("filename").value+".pdf";
+		output = "$HOME/Downloads/"+document.getElementById("filename").value+".pdf";
 	}
 	if(navigator.appVersion.indexOf("Linux")!=-1){
-		output = "~/Downloads/"+document.getElementById("filename").value+".pdf";
+		output = "$HOME/Downloads/"+document.getElementById("filename").value+".pdf";
 	}
 
 	markdownpdf(pdfopt).from.string(md).to(output, function(){
