@@ -15,13 +15,13 @@ document.getElementById('savePDF').onclick = function(){
 	}
 
 	if(navigator.appVersion.indexOf("Win")!=-1){
-		output = "%UserProfile%/Downloads"+document.getElementById("filename").value+".pdf";
+		output = process.env.USERPROFILE+ "/Downloads/"+document.getElementById("filename").value+ ".pdf";
 	}
 	if(navigator.appVersion.indexOf("Mac")!=-1){
-		output = "$HOME/Downloads/"+document.getElementById("filename").value+".pdf";
+		output = process.env.HOME+ "/Downloads/"+document.getElementById("filename").value+".pdf";
 	}
 	if(navigator.appVersion.indexOf("Linux")!=-1){
-		output = "$HOME/Downloads/"+document.getElementById("filename").value+".pdf";
+		output = process.env.HOME+ "/Downloads/"+document.getElementById("filename").value+".pdf";
 	}
 
 	markdownpdf(pdfopt).from.string(md).to(output, function(){
