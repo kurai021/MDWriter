@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "handlebars": "^4.0.5",
+    "markdown-pdf": "^7.0.0",
     "nodemailer": "^2.0.0"
   }
 }

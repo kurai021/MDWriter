@@ -1,30 +1,41 @@
+var markdownpdf = require("markdown-pdf");
+
 document.getElementById('savePDF').onclick = function(){
 
-	var doc = new jsPDF('p','pt','a4');
+	//var md = codemirror.getValue();
+	var md = document.getElementById('output').innerHTML;
+	var output;
 
-	specialElementHandlers = {
-		// element with id of "bypass" - jQuery style selector
-		function (element, renderer) {
-			// true = "handled elsewhere, bypass text extraction"
-			return true
+	var pdfopt = {
+    remarkable: {
+			html: true,
+			breaks: true,
+			syntax: [ 'footnote', 'sup', 'sub' ]
 		}
-	};
+	}
 
-	margins = {
-		top: 20,
-		bottom: 20,
-		left: 20,
-		width: 552
-  };
+	if(navigator.appVersion.indexOf("Win")!=-1){
+		output = "%UserProfile%/Downloads"+document.getElementById("filename").value+".pdf";
+	}
+	if(navigator.appVersion.indexOf("Mac")!=-1){
+		output = "~/Downloads/"+document.getElementById("filename").value+".pdf";
+	}
+	if(navigator.appVersion.indexOf("Linux")!=-1){
+		output = "~/Downloads/"+document.getElementById("filename").value+".pdf";
+	}
 
-	doc.fromHTML(document.getElementById("output"), margins.left, margins.top, {
-		'width': margins.width,
-		'elementHandlers': specialElementHandlers
-	},
+	markdownpdf(pdfopt).from.string(md).to(output, function(){
 
+		var options = {
+			body: "PDF created in "+output
+		};
 
-	function(dispose){
-		doc.save(document.getElementById("filename").value + '.pdf');
-	}, margins);
+		var pdfN = new Notification('MDWriter',options);
+		setTimeout(function() {pdfN.close();}, 5000);
+
+		// your code goes here...
+		console.log('PDF created!');
+
+	});
 
 }
