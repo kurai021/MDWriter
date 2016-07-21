@@ -363,6 +363,10 @@ ul.off-canvas-list li a:hover {
   text-decoration: underline;
 }
 
+svg .fa {
+  display: inline;
+}
+
 a {
   color: #3D3D3D;
 }
