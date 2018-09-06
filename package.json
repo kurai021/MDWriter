@@ -1,6 +1,6 @@
 {
   "name": "MDWriter",
-  "version": "16.04",
+  "version": "18.09.1",
   "main": "app/index.html",
   "window": {
     "title": "MDWriter",
@@ -8,22 +8,23 @@
     "toolbar": false,
     "frame": false,
     "position": "center",
-    "width": 800,
-    "height": 600,
-    "min_width": 800,
-    "min_height": 600,
+    "min_width": 1024,
+    "min_height": 768,
     "resizable": true
   },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-open": "^0.3.2",
-    "gulp-shell": "^0.2.11",
-    "nw": "^0.12.0-alpha2",
-    "nw-builder": "^2.2.0"
-  },
-  "dependencies": {
-    "handlebars": "^4.0.5",
-    "markdown-pdf": "^7.0.0",
-    "nodemailer": "^2.0.0"
+    "gulp": "*",
+    "gulp-open": "*",
+    "gulp-shell": "*",
+    "nw": "*",
+    "nw-builder": "*"
   }
 }

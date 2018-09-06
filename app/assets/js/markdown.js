@@ -1261,7 +1261,6 @@ document.body.onkeyup = function(e) {
 
   }
 
-
   var checkboxes_array = {
     checkbox_uncheck: {
       keyword: '[ ]',

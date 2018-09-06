@@ -7,20 +7,20 @@ var nw_builder = require('nw-builder');
 gulp.task('test', shell.task(['node_modules/.bin/nw .']));
 
 gulp.task('build-highlight', shell.task([
-	'cd app/assets/components/highlight.js/ && npm install',
-	'cd app/assets/components/highlight.js/ && node tools/build.js :common'
+	'cd app/node_modules/highlight.js/ && npm install',
+	'cd app/node_modules/highlight.js/ && node tools/build.js :common'
 ]));
 
 gulp.task('browser', function(){
   gulp.src('./app/*.html')
-  .pipe(open('file://<%= file.path %>', {app: 'firefox-aurora'}));
+  .pipe(open('file://<%= file.path %>', {app: 'firefox-trunk'}));
 });
 
 gulp.task('build', function(){
   var nw = new nw_builder({
-    files: ['./package.json', './bower.json', './.bowercc', './LICENSE', './README.md', './app/**', './node_modules/**'],
+    files: ['./package.json', './LICENSE', './README.md', './app/**'],
     platforms: ['linux64', 'osx64', 'win64'],
-    version: '0.12.3'
+    version: '0.33.0'
   })
 
   nw.on('log', console.log);

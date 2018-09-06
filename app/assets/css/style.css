@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding-top: 50px;
   background: #fafafa;
   padding-left: 0;
   padding-right: 0;
@@ -117,6 +116,7 @@ select {
 
 .left-off-canvas-menu {
   background-color: #636E73;
+  height: 100vh;
 }
 
 .left-small {
@@ -139,6 +139,10 @@ ul.off-canvas-list li label {
 ul.off-canvas-list li .fa {
   margin-right: 16px;
   font-size: 20px;
+}
+
+#view-editor {
+  margin-top: 2vh;
 }
 
 @keyframes aniborder{
@@ -174,10 +178,6 @@ ul.off-canvas-list li a:hover {
 
 .white {
   color: white;
-}
-
-.fixed {
-  top: -50px;
 }
 
 #div-name-file {
