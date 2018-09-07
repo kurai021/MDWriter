@@ -1,4 +1,4 @@
-var markdownpdf = require("markdown-pdf");
+var markdownpdf = require("../app/node_modules/markdown-pdf");
 
 document.getElementById('savePDF').onclick = function(){
 

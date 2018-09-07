@@ -9,7 +9,7 @@ A markdown desktop editor with steroids powered by the web.
 * Export to HTML, PDF and DOCX
 * Syntax Highlighting
 * Editor and highlighting themes and font size changer
-* Outlook, Gmail and Yahoo support
+* Outlook, Gmail and Yahoo support (for Gmail you must enable [less secure apps](https://myaccount.google.com/lesssecureapps))
 * Blogger support (experimental)
 * Word counter
 * Markdown syntax helper and shortcuts

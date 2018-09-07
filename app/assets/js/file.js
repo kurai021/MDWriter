@@ -1,6 +1,6 @@
-var handlebars = require("handlebars");
+var handlebars = require("../app/node_modules/handlebars");
 
-document.getElementById('loadFile').onclick = function(){
+document.getElementById('filetoload').onchange = function(){
   return loadFileAsText();
 }
 
@@ -41,22 +41,7 @@ function saveFileAsText() {
   downloadLink.download = fileNameToSaveAs;
   downloadLink.innerHTML = "Download File";
 
-  if (window.webkitURL != null) {
-
-    // Chrome allows the link to be clicked
-    // without actually adding it to the DOM.
-    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-  }
-
-  else {
-
-    // Firefox requires the link to be added to the DOM
-    // before it can be clicked.
-    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-    downloadLink.onclick = destroyClickedElement;
-    downloadLink.style.display = "none";
-    document.body.appendChild(downloadLink);
-  }
+  downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
 
   downloadLink.click();
 
@@ -83,22 +68,7 @@ function saveFileAsHTML() {
   downloadHTML.download = fileNameToSaveAs;
   downloadHTML.innerHTML = "Download File";
 
-  if (window.webkitURL != null) {
-
-    // Chrome allows the link to be clicked
-    // without actually adding it to the DOM.
-    downloadHTML.href = window.webkitURL.createObjectURL(textFileAsBlob);
-  }
-
-  else {
-
-    // Firefox requires the link to be added to the DOM
-    // before it can be clicked.
-    downloadHTML.href = window.URL.createObjectURL(textFileAsBlob);
-    downloadHTML.onclick = destroyClickedElement;
-    downloadHTML.style.display = "none";
-    document.body.appendChild(downloadHTML);
-  }
+  downloadHTML.href = window.URL.createObjectURL(textFileAsBlob);
 
   downloadHTML.click();
 

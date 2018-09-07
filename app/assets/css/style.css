@@ -123,9 +123,26 @@ select {
   border-right: solid 1px #636E73;
 }
 
-ul.off-canvas-list li a {
+ul.off-canvas-list li a, ul.off-canvas-list .inputfix label{
   border-bottom: 1px solid transparent;
   border-left: 1px solid transparent;
+}
+
+ul.off-canvas-list .inputfix label {
+  color: rgba(255,255,255,.7);
+  display: block;
+  padding: .66667rem;
+  transition: background .3s ease;
+  border-bottom: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.7);
+}
+
+ul.off-canvas-list .inputfix label:hover {
+  animation: aniborder 0.2s forwards;
+  -webkit-animation: aniborder 0.2s forwards;
+  background-color: #828B8F;
 }
 
 ul.off-canvas-list li label {
@@ -136,7 +153,7 @@ ul.off-canvas-list li label {
   text-transform: none;
 }
 
-ul.off-canvas-list li .fa {
+ul.off-canvas-list li .fa, ul.off-canvas-list li .fab, ul.off-canvas-list li .fas {
   margin-right: 16px;
   font-size: 20px;
 }
@@ -385,10 +402,6 @@ a:active {
 
 a:visited {
   color: #3D3D3D;
-}
-
-#loadFile {
-  margin-bottom: 15px;
 }
 
 #btn-min, #btn-max, #btn-close {

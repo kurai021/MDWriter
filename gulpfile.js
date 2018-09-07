@@ -20,7 +20,9 @@ gulp.task('build', function(){
   var nw = new nw_builder({
     files: ['./package.json', './LICENSE', './README.md', './app/**'],
     platforms: ['linux64', 'osx64', 'win64'],
-    version: '0.33.0'
+    version: '0.33.0',
+		flavor: 'normal',
+		buildType: 'versioned'
   })
 
   nw.on('log', console.log);

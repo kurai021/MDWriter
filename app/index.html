@@ -55,11 +55,9 @@
   <link rel="stylesheet" href="node_modules/codemirror/theme/yeti.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/zenburn.css">
 
-  <!-- mermaid CSS -->
-  <link rel="stylesheet" href="node_modules/mermaid/dist/mermaid.css">
-
   <!-- custom style -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/uifixes.css">
   <link rel="stylesheet" href="assets/css/emoji.css">
 </head>
 
@@ -93,7 +91,9 @@
           <li>
             <label>File</label>
           </li>
-          <li><a href="#" data-reveal-id="toLoad-alert"><i class="fa fa-upload"></i> Load File</a>
+          <li class="inputfix">
+            <label for="filetoload" id="loadFile"><i class="fa fa-upload"></i> Load File</label>
+            <input class="show-for-sr" id="filetoload" type="file" accept=".md">
           </li>
           <li><a href="#" id="saveMd"><i class="fa fa-save"></i> Save File</a>
           </li>

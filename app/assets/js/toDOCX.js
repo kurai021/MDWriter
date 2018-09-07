@@ -16,26 +16,8 @@ document.getElementById('saveDOCX').onclick = function(){
   downloadDOCX.download = context.title + ".docx";
   downloadDOCX.innerHTML = "Download File";
 
-  if (window.webkitURL != null) {
+  downloadDOCX.href = window.URL.createObjectURL(converted);
 
-    // Chrome allows the link to be clicked
-    // without actually adding it to the DOM.
-    downloadDOCX.href = window.webkitURL.createObjectURL(converted);
-  }
-
-  else {
-
-    // Firefox requires the link to be added to the DOM
-    // before it can be clicked.
-    downloadDOCX.href = window.URL.createObjectURL(converted);
-    downloadDOCX.onclick = destroyClickedElement;
-    downloadDOCX.style.display = "none";
-    document.body.appendChild(downloadDOCX);
-  }
-
-  downloadDOCX.click();
-
-}
 
 function convertImagesToBase64() {
   var contentDocument = document.getElementById('output');

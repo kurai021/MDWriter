@@ -1,4 +1,4 @@
-var nodemailer = require('nodemailer');
+var nodemailer = require('../app/node_modules/nodemailer');
 
 document.getElementById("send-email").onclick = function(){
 
@@ -21,7 +21,13 @@ document.getElementById("send-email").onclick = function(){
   var yahoo_patt = /@yahoo.com|@yahoo.es/g;
 
   if(gmail_patt.test(from) == true){
-    var transporter = nodemailer.createTransport("smtps://" + from + ":" + pass + "@smtp.gmail.com");
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: from,
+        pass: pass
+      }
+    });
   }
 
   else if (outlook_patt.test(from) == true) {
