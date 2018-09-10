@@ -15,14 +15,14 @@ function loadFileAsText() {
 
     codemirror.getDoc().setValue(textFromFileLoaded);
     filename.value = file.value.split('/').pop().replace('.md','');
-    document.getElementById('toLoad-alert').style.visibility = "hidden";
 
     document.getElementById('editor').value = codemirror.getValue();
     document.getElementById('output').innerHTML = marked(document.getElementById('editor').value);
 
-    return word_counter();
   };
   fileReader.readAsText(fileToLoad, "UTF-8");
+
+  setTimeout(function(){word_counter();}, 500);
 
 }
 

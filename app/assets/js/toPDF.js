@@ -2,7 +2,6 @@ var markdownpdf = require("../app/node_modules/markdown-pdf");
 
 document.getElementById('savePDF').onclick = function(){
 
-	//var md = codemirror.getValue();
 	var md = document.getElementById('output').innerHTML;
 	var output;
 

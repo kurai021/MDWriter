@@ -17,6 +17,7 @@ document.getElementById('saveDOCX').onclick = function(){
   downloadDOCX.innerHTML = "Download File";
 
   downloadDOCX.href = window.URL.createObjectURL(converted);
+}
 
 
 function convertImagesToBase64() {

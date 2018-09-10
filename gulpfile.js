@@ -11,11 +11,6 @@ gulp.task('build-highlight', shell.task([
 	'cd app/node_modules/highlight.js/ && node tools/build.js :common'
 ]));
 
-gulp.task('browser', function(){
-  gulp.src('./app/*.html')
-  .pipe(open('file://<%= file.path %>', {app: 'firefox-trunk'}));
-});
-
 gulp.task('build', function(){
   var nw = new nw_builder({
     files: ['./package.json', './LICENSE', './README.md', './app/**'],

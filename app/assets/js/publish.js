@@ -1,27 +1,35 @@
-var services = {
-  tumblr: {
-    url: 'http://tumblr.com/share/text?url=http://kurai021.github.io/MDWriter',
-    title: '&title=',
-    body: '&body='
-  },
-  blogger: {
-    url: 'https://www.blogger.com/blog-this.g?',
-    title: '&n=',
-    body: '&t='
-  }
-}
-
 var name = document.getElementById('filename').value;
 var content = document.getElementById('output');
 
-document.getElementById("tumblr").onclick = function(){
-  var tumblrEmbed = document.getElementById("tumblr-embed");
+var bloggerUrl = document.getElementById("bloggerUrl").value;
 
-  tumblrEmbed.setAttribute("href", services.tumblr.url + services.tumblr.title + name + services.tumblr.body + content.innerHTML);
+var services = {
+  blogger: {
+    endpoint: 'https://www.googleapis.com/blogger/v3/blogs/',
+    oauth: '891869804234-c77gaa25td962qaiasafu0g3ild5bvkb.apps.googleusercontent.com:4AAoGdscx0u9cfTR9cMkFJL5',
+    blog_url: bloggerUrl,
+    data: {
+      title: name,
+      content: content
+    }
+  }
 }
 
-document.getElementById("blogger").onclick = function(){
-  var bloggerEmbed = document.getElementById("blogger-embed");
-
-  bloggerEmbed.setAttribute("href", services.blogger.url + services.blogger.body + content.innerHTML + services.blogger.title + name);
+document.getElementById("blogger-send").onclick = function(){
+  $.ajaxSetup({
+    beforeSend: function(request) {
+        request.setRequestHeader("User-Agent",services.blogger.oauth);
+    }
+  });
+  $.ajax({
+    url: services.blogger.endpoint + services.blogger.blog_url + '/posts/',
+    type: "POST",
+    datatype: "application/json; charset=utf-8",
+    data: {
+      title: services.blogger.data.title,
+      content: services.blogger.data.content
+    }
+  }).done(function(msg){
+    console.log("Data saved: " + msg);
+  });
 }

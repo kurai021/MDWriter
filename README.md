@@ -10,12 +10,12 @@ A markdown desktop editor with steroids powered by the web.
 * Syntax Highlighting
 * Editor and highlighting themes and font size changer
 * Outlook, Gmail and Yahoo support (for Gmail you must enable [less secure apps](https://myaccount.google.com/lesssecureapps))
-* Blogger support (experimental)
+* Blogger support (see ToDo)
 * Word counter
 * Markdown syntax helper and shortcuts
 * Emoji and shortcuts support
 * Mermaid for Flowchart/Graphs and Gantt diagram support, [see basic syntax](http://knsv.github.io/mermaid/#graph)
-* And a nice UI :D
+* And a nice UI based in Material.
 
 ## Getting Started
 
@@ -39,11 +39,6 @@ $ cd MDWriter/
 
 ## Test
 
-### Testing in browser
-
-* For testing in browser you need to change **{app: 'firefox-aurora'}** in gulpfile.js for your browser order.
-* run gulp browser in the terminal
-
 ### Testing with NW
 
 * run gulp test in terminal
@@ -54,16 +49,9 @@ $ cd MDWriter/
 
 ## ToDo
 
-* ~~Actually jsPDF is unstable with SVG, is necessary to find a module that does the same function or create a module from scratch for HTML5 to PDF.~~
-* ~~Some bugs in the word counter must be solved.~~
-* ~~In file name is necessary to clean the name -> /foo/bar.md to bar.~~
-* ~~Change font size in live.~~
-* ~~Support for Blogger, Tumblr~~ and Wordpress (maybe Ghost).
-* ~~Emoji support~~ (partial)
-* ~~Flowchart/Graphs and Gantt support~~
-* ~~Separate load/save as .md file from markdown.js~~
-* ~~Markdown shortcuts fixed~~
-* Print support?.
+* ~~Emoji support~~ (actually the support is partial)
+* Print support.
+* Fix publish options using the APIs (Tumblr is necesary?) and add Ghost and Wordpress suport.
 * Optimize the code
 * Create a task for minification.
 
