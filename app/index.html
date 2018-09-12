@@ -21,29 +21,40 @@
   <link rel="stylesheet" href="node_modules/codemirror/theme/blackboard.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/cobalt.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/colorforth.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/darcula.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/dracula.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/duotone-dark.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/duotone-light.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/eclipse.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/elegant.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/erlang-dark.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/gruvbox-dark.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/hopscotch.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/icecoder.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/idea.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/isotope.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/lesser-dark.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/lucario.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/liquibyte.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/material.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/mbo.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/mdn-like.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/midnight.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/monokai.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/neat.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/neo.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/night.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/oceanic-next.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/panda-syntax.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/paraiso-dark.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/paraiso-light.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/pastel-on-dark.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/railscasts.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/rubyblue.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/seti.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/shadowfox.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/solarized.css">
+  <link rel="stylesheet" href="node_modules/codemirror/theme/ssms.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/the-matrix.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/tomorrow-night-bright.css">
   <link rel="stylesheet" href="node_modules/codemirror/theme/tomorrow-night-eighties.css">
@@ -59,6 +70,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/uifixes.css">
   <link rel="stylesheet" href="assets/css/emoji.css">
+
 </head>
 
 <body ng-app="MdWController">
@@ -146,6 +158,7 @@
 
   <script src="node_modules/foundation-sites/js/vendor/modernizr.js"></script>
   <script src="node_modules/foundation-sites/js/vendor/jquery.js"></script>
+  <script src="assets/js/vendor/jquery-ui.min.js"></script>
   <script src="node_modules/foundation-sites/js/foundation.min.js"></script>
 
   <script src="node_modules/angular/angular.min.js"></script>
@@ -163,11 +176,23 @@
   <script src="node_modules/codemirror/addon/selection/active-line.js"></script>
   <script src="node_modules/codemirror/mode/markdown/markdown.js"></script>
 
+  <script src="node_modules/mathjax/unpacked/MathJax.js" charset="utf-8"></script>
+  <script type="text/javascript" src="node_modules/mathjax/unpacked/config/TeX-AMS_HTML-full.js">
+  </script>
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+  </script>
+
   <script src="assets/js/MdWController.js"></script>
 
   <div id="handlebars" ng-include="'assets/views/handlebars_template.html'"></div>
+  <div id="handlebars" ng-include="'assets/views/scripts.html'"></div>
 
-  <div id="view-scripts" ng-include="'assets/views/scripts.html'"></div>
 </body>
 
 </html>

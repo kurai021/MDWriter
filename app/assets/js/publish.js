@@ -6,7 +6,7 @@ var bloggerUrl = document.getElementById("bloggerUrl").value;
 var services = {
   blogger: {
     endpoint: 'https://www.googleapis.com/blogger/v3/blogs/',
-    oauth: '891869804234-c77gaa25td962qaiasafu0g3ild5bvkb.apps.googleusercontent.com:4AAoGdscx0u9cfTR9cMkFJL5',
+    apikey: 'AIzaSyAOpLRfEMwE8WYZX_NpHdx3W24Oqz9mkEI',
     blog_url: bloggerUrl,
     data: {
       title: name,
@@ -18,7 +18,7 @@ var services = {
 document.getElementById("blogger-send").onclick = function(){
   $.ajaxSetup({
     beforeSend: function(request) {
-        request.setRequestHeader("User-Agent",services.blogger.oauth);
+        request.setRequestHeader("User-Agent",services.blogger.apikey);
     }
   });
   $.ajax({

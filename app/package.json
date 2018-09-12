@@ -19,6 +19,7 @@
     "html-docx-js": "*",
     "markdown-pdf": "*",
     "marked": "*",
+    "mathjax": "^2.7.5",
     "mermaid": "*",
     "nodemailer": "*"
   }
