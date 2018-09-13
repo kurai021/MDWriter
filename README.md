@@ -15,6 +15,7 @@ A markdown desktop editor with steroids powered by the web.
 * Markdown syntax helper and shortcuts
 * Emoji and shortcuts support
 * Mermaid for Flowchart/Graphs and Gantt diagram support, [see basic syntax](http://knsv.github.io/mermaid/#graph)
+* Mathjax support
 * And a nice UI based in Material.
 
 ## Getting Started
