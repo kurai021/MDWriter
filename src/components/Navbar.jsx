@@ -33,6 +33,11 @@ const ThemeAppBar = styled(AppBar)(({ theme, isDarkMode }) => ({
 	backgroundColor: isDarkMode ? grey[900] : blue[800],
 }));
 
+const ThemeDrawerContent = styled(Box)(({ theme, isDarkMode }) => ({
+	color: isDarkMode ? theme.palette.getContrastText(grey[900]) : theme.palette.getContrastText(grey[200]),
+	backgroundColor: isDarkMode ? grey[900] : grey[200],
+}));
+
 export default function PersistentDrawer({ isDarkMode }) {
 	const [drawerOpen, setDrawerOpen] = React.useState(false);
 
@@ -41,14 +46,24 @@ export default function PersistentDrawer({ isDarkMode }) {
 	};
 
 	const drawer = (
-		<Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+		<ThemeDrawerContent onClick={handleDrawerToggle} isDarkMode={isDarkMode} sx={{ textAlign: 'center' }}>
 			<List
 				style={{
 					marginTop: "60px"
 				}}
+				sx={{
+					'& li.MuiListItem-root .MuiButtonBase-root .MuiListItemIcon-root': {
+						color: isDarkMode ? '#fff' : 'rgba(0, 0, 0, 0.54)'
+					},
+					'& li.MuiListItem-root a': {
+						color: isDarkMode ? '#fff' : 'rgba(0, 0, 0, 0.87)'
+					},
+				}}
 			>
 				<ListItem key="Save" disablePadding>
-					<ListItemButton sx={{ textAlign: 'left' }}>
+					<ListItemButton sx={{
+						textAlign: 'left'
+					}}>
 						<ListItemIcon>
 							<DescriptionIcon />
 						</ListItemIcon>
@@ -84,8 +99,7 @@ export default function PersistentDrawer({ isDarkMode }) {
 					<NavLink to="/"
 						style={{
 							textDecoration: 'none',
-							display: 'contents',
-							color: 'rgba(0, 0, 0, 0.87)'
+							display: 'contents'
 						}}
 					>
 						<ListItemButton sx={{ textAlign: 'left' }}>
@@ -110,8 +124,7 @@ export default function PersistentDrawer({ isDarkMode }) {
 					<NavLink to="/settings"
 						style={{
 							textDecoration: 'none',
-							display: 'contents',
-							color: 'rgba(0, 0, 0, 0.87)'
+							display: 'contents'
 						}}
 					>
 						<ListItemButton sx={{ textAlign: 'left' }}>
@@ -124,7 +137,7 @@ export default function PersistentDrawer({ isDarkMode }) {
 				</ListItem>
 
 			</List>
-		</Box>
+		</ThemeDrawerContent>
 	);
 
 	return (
@@ -153,6 +166,7 @@ export default function PersistentDrawer({ isDarkMode }) {
 				}}
 				sx={{
 					'& .MuiDrawer-paper': {
+						backgroundColor: isDarkMode ? grey[900] : grey[200],
 						boxSizing: 'border-box',
 						width: drawerWidth,
 					},
